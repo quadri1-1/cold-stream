@@ -1,8 +1,10 @@
-import React from 'react'
-
+import React from 'react';
+import List  from "../Rentalproprties components/List";
 const Rentalproperties = () => {
   return (
-    <div>Rentalproperties</div>
+    <div>
+      <List/>
+    </div>
   )
 }
 

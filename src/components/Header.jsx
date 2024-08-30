@@ -24,7 +24,7 @@ const Header = () => {
           </div>
         </Link>
 
-        <Link>
+        <Link to="/owner">
           <div className="person">
             <img src={people} alt="" />
             <Nav.Link href="#home">Owners</Nav.Link>
@@ -40,21 +40,31 @@ const Header = () => {
           </div>
         </Link>
         <p>610-432-1553</p>
-          </div >
-          <div id="head">
-          <div>
-              <img src="" alt="logo" />
-          </div>
-          <div className="prop"></div>
-          <div className="head">
-              <Link to="/" className="repair">Home</Link>
-              <Link to="/rent" className="repair">Rental Properties</Link>
-              <Link to="sale" className="repair">Properties For Sale</Link>
-              <Link to="openbox" className="repair">Open Box</Link>
-              <Link to="contact" className="repair">Contact Us</Link>
-          </div>
-              <div className="prop"></div>
-              </div>
+      </div>
+      <div id="head">
+        <div>
+          <img src="" alt="logo" />
+        </div>
+        <div className="prop"></div>
+        <div className="head">
+          <Link to="/" className="repair">
+            Home
+          </Link>
+          <Link to="/rent" className="repair">
+            Rental Properties
+          </Link>
+          <Link to="sale" className="repair">
+            Properties For Sale
+          </Link>
+          <Link to="openbox" className="repair">
+            Open Box
+          </Link>
+          <Link to="contact" className="repair">
+            Contact Us
+          </Link>
+        </div>
+        <div className="prop"></div>
+      </div>
     </div>
   );
 };

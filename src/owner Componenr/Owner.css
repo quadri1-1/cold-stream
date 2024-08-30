@@ -1,0 +1,35 @@
+.owner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.owners{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.stone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stone button{
+    width: 90%;
+    border: none;
+    background-color: grey;
+    color: white;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    font-family: var(--open);
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.hrs{
+    width: 90%;
+}
+.invest{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

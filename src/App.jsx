@@ -7,6 +7,9 @@ import About from './pages/About'
 import Openbox from './pages/Openbox'
 import Propertiesforsale from './pages/Propertiesforsale'
 import Rentalproperties from './pages/Rentalproperties'
+import Needfinancing from './Home components/Needfinancing'
+import Directions from './Home components/Directions'
+import Owner from './owner Componenr/Owner'
 function App() {
 
 
@@ -20,9 +23,11 @@ function App() {
           <Route path='/about' element={<About/>} />
           <Route path='/openbox' element={<Openbox/> } />
           <Route path='/sale' element={<Propertiesforsale />} />
-          <Route path='/rent' element={<Rentalproperties/> } />
-
+          <Route path='/rent' element={<Rentalproperties />} />
+          <Route path='/owner' element={<Owner/>} />
         </Routes>
+        <Needfinancing />
+        <Directions/>
       </Router>
     </div>
   )

@@ -1,0 +1,42 @@
+.serv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#serv{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#serv img{
+    width: 50px;
+}
+#serv p{
+    text-align: center;
+    font-family: var(--open);
+    font-size: 18px;
+    margin-top: 20px;
+    color: #666;
+}
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.app h1{
+    color: #666;
+    font-family: var(--rub);
+    font-size: 33x;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+}
+@media(max-width: 500px){
+    .serv{
+        flex-direction: column;
+    }
+    #serv{
+        width: 90%;
+    }
+}
