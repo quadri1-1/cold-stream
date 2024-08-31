@@ -78,6 +78,7 @@ const OnlineRentalApplication = () => {
             <form onSubmit={handleSubmit}>
                 <label htmlFor="propertyInterest">Property I am interested in
                     <select 
+                        required
                         name="propertyInterest" 
                         id="propertyInterest"
                         value={formData.propertyInterest}
@@ -106,6 +107,7 @@ const OnlineRentalApplication = () => {
                     <legend>
                         <label htmlFor="firstName">
                             <input 
+                                required
                                 type="text" 
                                 id="firstName" 
                                 name="firstName" 
@@ -117,6 +119,7 @@ const OnlineRentalApplication = () => {
                         {errors.firstName && <span className="error">{errors.firstName}</span>}
                         <label htmlFor="lastName">
                             <input 
+                                required
                                 type="text" 
                                 id="lastName" 
                                 name="lastName" 
@@ -133,6 +136,7 @@ const OnlineRentalApplication = () => {
                     <figcaption>Current Address</figcaption>
                     <label htmlFor="streetAddress">
                         <input 
+                            required
                             type="text" 
                             id="streetAddress" 
                             name="streetAddress" 
@@ -144,6 +148,7 @@ const OnlineRentalApplication = () => {
                     {errors.streetAddress && <span className="error">{errors.streetAddress}</span>}
                     <label htmlFor="addressLine2">
                         <input 
+                            required
                             type="text" 
                             id="addressLine2" 
                             name="addressLine2" 
@@ -155,6 +160,7 @@ const OnlineRentalApplication = () => {
                     <div className='add-flex'>
                         <label htmlFor="city">
                             <input 
+                                required
                                 type="text" 
                                 id="city" 
                                 name="city" 
@@ -166,6 +172,7 @@ const OnlineRentalApplication = () => {
                         {errors.city && <span className="error">{errors.city}</span>}
                         <label htmlFor="state">
                             <select 
+                                required
                                 name="state" 
                                 id="state" 
                                 value={formData.state} 
@@ -229,6 +236,7 @@ const OnlineRentalApplication = () => {
                     </div>
                     <label htmlFor="zipCode">ZIP Code
                         <input 
+                            required
                             type="text" 
                             id="zipCode" 
                             name="zipCode" 
@@ -242,6 +250,7 @@ const OnlineRentalApplication = () => {
                 <div className="contact-section">
                     <label htmlFor="phone">
                         <input 
+                            required
                             type="tel" 
                             id="phone" 
                             name="phone" 
@@ -253,6 +262,7 @@ const OnlineRentalApplication = () => {
                     {errors.phone && <span className="error">{errors.phone}</span>}
                     <label htmlFor="email">
                         <input 
+                            required
                             type="email" 
                             id="email" 
                             name="email" 
@@ -264,23 +274,25 @@ const OnlineRentalApplication = () => {
                     {errors.email && <span className="error">{errors.email}</span>}
                     <label htmlFor="contactPreference" id="contactPreference">Best Option to Contact you?
                         <div className='contact-flex'>
-                            <label htmlFor="phone">Phone
+                            <label htmlFor="phone">
                                 <input 
+                                    required
                                     type="radio" 
                                     id="phone" 
                                     name="contactPreference" 
                                     value="phone" 
                                     onChange={handleChange}
-                                />
+                                />Phone
                             </label>
-                            <label htmlFor="email">Email
+                            <label htmlFor="email">
                                 <input 
+                                    required
                                     type="radio" 
                                     id="email" 
                                     name="contactPreference" 
                                     value="email" 
                                     onChange={handleChange}
-                                />
+                                />Email
                             </label>
                         </div>
                     </label>
@@ -290,6 +302,7 @@ const OnlineRentalApplication = () => {
                 <div className="property-section">
                     <label htmlFor="propertyType">What type of property are you looking for?
                         <select 
+                            required
                             name="propertyType" 
                             id="propertyType"
                             value={formData.propertyType}
@@ -302,6 +315,7 @@ const OnlineRentalApplication = () => {
                     </label>
                     <label htmlFor="rentalArea">What area are you looking to rent?
                         <select 
+                            required
                             name="rentalArea" 
                             id="rentalArea"
                             value={formData.rentalArea}
@@ -316,6 +330,7 @@ const OnlineRentalApplication = () => {
                     </label>
                     <label htmlFor="bedrooms">How many bedrooms are you looking for? *
                         <input 
+                            required
                             type="number" 
                             id="bedrooms" 
                             name="bedrooms" 
@@ -325,6 +340,7 @@ const OnlineRentalApplication = () => {
                     </label>
                     <label htmlFor="occupants">How many occupants will be living in the property? *
                         <input 
+                            required
                             type="number" 
                             id="occupants" 
                             name="occupants" 
@@ -337,6 +353,7 @@ const OnlineRentalApplication = () => {
                 <div className="questions-section">
                     <label htmlFor="landlordReference">Do you have a non-relative landlord reference?
                         <select 
+                            required
                             name="landlordReference" 
                             id="landlordReference"
                             value={formData.landlordReference}
@@ -349,6 +366,7 @@ const OnlineRentalApplication = () => {
                     </label>
                     <label htmlFor="pets">Do you have any pets? (We have a no-pet policy.)
                         <select 
+                            required
                             name="pets" 
                             id="pets"
                             value={formData.pets}
@@ -361,6 +379,7 @@ const OnlineRentalApplication = () => {
                     </label>
                     <label htmlFor="landlordJudgment">Have you ever had a landlord judgement against you or been evicted before?
                         <select 
+                            required
                             name="landlordJudgment" 
                             id="landlordJudgment"
                             value={formData.landlordJudgment}
@@ -373,6 +392,7 @@ const OnlineRentalApplication = () => {
                     </label>
                     <label htmlFor="smokingCompliance">Our properties are non-smoking. Are you able to comply?
                         <select 
+                            required
                             name="smokingCompliance" 
                             id="smokingCompliance"
                             value={formData.smokingCompliance}

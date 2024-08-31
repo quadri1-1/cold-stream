@@ -109,11 +109,10 @@ body {
     margin-bottom: 10px;
 }
 
-/* Flex Containers for Side-by-Side Inputs */
 .add-flex,
 .contact-flex {
     display: flex;
-    flex-direction: column; /* Changed to column for full-width inputs */
+    flex-direction: row;
     gap: 15px;
 }
 
