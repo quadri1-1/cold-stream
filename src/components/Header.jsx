@@ -17,7 +17,7 @@ const Header = () => {
               className="repairs"
               id="basic-nav-dropdown "
             >
-              <Link className="repair">Repair Request</Link>
+              <Link to="/repair-request" className="repair">Repair Request</Link>
               <Link className="repair">Utility Contacts</Link>
               <Link className="repair">Rental Search</Link>
             </NavDropdown>
