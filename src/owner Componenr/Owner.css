@@ -1,0 +1,62 @@
+.owner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.owner img{
+    width: 50px;
+}
+.owners{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.stone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stone button{
+    width: 90%;
+    height: 40px;
+    border: none;
+    background-color: grey;
+    color: white;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    font-family: var(--open);
+    font-weight: 500;
+    margin-bottom: 50px;
+   align-items: center;
+   margin-top: 20px;
+}
+.stone{
+    text-decoration: none;
+}
+.hrs{
+    width: 90%;
+}
+.invest{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.invest h2{
+    width: 40%;
+    text-align: center;
+    height: 20vh;
+    margin-top: 130px;
+}
+@media(max-width: 500px){
+    .owners{
+        flex-direction: column;
+    }
+    
+}
+@media(max-width: 900px){
+    .invest h2 {
+            margin-top: 20px;
+            width: 80%;
+        }
+}

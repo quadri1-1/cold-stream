@@ -7,15 +7,21 @@
     flex-direction: row;
     justify-content: end;
     gap: 20px;
-    margin-right: 20px;
+    margin-right: 200px;
+}
+.bob{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 .repair{
     text-decoration: unset;
     color: #666;
+    font-weight: 500;
+    
 }
-.repairs{
-    display: flex;
-    flex-direction: column;
+.lack{
+width: 500px;
 }
 .head{
     display: flex;
@@ -25,6 +31,7 @@
     font-style: italic;
     justify-content: center;
     font-size: 18px;
+    gap: 20px;
 }
 #head{
     display: flex;
@@ -32,9 +39,44 @@
     align-items: center;  
 }
 .prop{
-    height: 2px;
+    height: 1px;
     width: 100%;
     background-color:  #666;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+.bob p{
+    color: #666; 
+    font-family: var(--open);
+    font-size: 16px;
+    font-weight: 500;
+}
+.dark {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+@media(max-width: 500px){
+    .header{
+        gap: 10px;
+    }
+    .header{
+        margin-right: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .repair{
+        font-size: 12px;
+    }
+    .head{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+    .dark{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
 }

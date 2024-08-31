@@ -1,0 +1,62 @@
+.log{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+
+}
+.log h3{
+    color: black; 
+    font-family: var(--open);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.6px;
+    margin-top: 5px;
+}
+.acc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.acc button{
+    width: 40%;
+    height: 40px;
+    border: none;
+    background-color: grey;
+    color: white;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    font-family: var(--open);
+    font-weight: 500;
+    margin-bottom: 50px;
+   align-items: center;
+   margin-top: 20px;
+}
+.parle p{
+    width: 80%;
+    color: #666; 
+    font-family: var(--open);
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.6px;
+}
+.monitor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.monitor h2{
+    color: black; 
+    font-family: var(--pop);
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0.6px;
+    margin-top: 5px;
+}
