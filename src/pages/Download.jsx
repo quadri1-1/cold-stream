@@ -2,8 +2,8 @@ import React from "react";
 import pen from "../assets/pen.png";
 import { Link } from "react-router-dom";
 import "../styles/download.css"
-const APPLICATION_URL = "coldstreamfarmpropertymanagement.vercel.app/Application-1.pdf"
-const REQUIREMENTS_URL = "coldstreamfarmpropertymanagement.vercel.app/Requirements-To-Rent.pdf"
+const APPLICATION_URL = "/Application-1.pdf"
+const REQUIREMENTS_URL = "/Requirements-To-Rent.pdf"
 
 const Download = () => {
   const downloadFileAtURL = (url) => {
