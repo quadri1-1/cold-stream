@@ -14,6 +14,7 @@ import Directions from './Home components/Directions'
 import Owner from './owner Componenr/Owner'
 import Ownerpotal from './pages/Ownerpotal'
 import UtilityContacts from "./pages/UtilityContacts"
+import RepairRequest from "./pages/RepairRequest"
 import Download from './pages/Download'
 import Details1 from './Details/Details1'
 function App() {
@@ -29,7 +30,8 @@ function App() {
           <Route path='/about' element={<About/>} />
           <Route path='/openbox' element={<Openbox/> } />
           <Route path='/sale' element={<Propertiesforsale />} />
-          <Route path='/pre-screen-rental-application' element={<OnlineRentalApplication/>}></Route>
+          <Route path='/pre-screen-rental-application' element={<OnlineRentalApplication/>} />
+          <Route path='/repair-request' element={<RepairRequest/>} />
           <Route path='/rent' element={<Rentalproperties />} />
           <Route path='/owner' element={<Owner />} />
           <Route path='/ownerpot' element={<Ownerpotal />} />
