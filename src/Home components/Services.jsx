@@ -4,7 +4,8 @@ import "../styles/services.css";
 
 const Services = () => {
   return (
-      <div className="app">
+    <div className="">
+      <div className="app container">
           <h1>Our Services</h1>
       <div className="serv">
         
@@ -36,7 +37,8 @@ const Services = () => {
           </p>
         </div>
       </div>
-    </div>
+      </div>
+      </div>
   );
 };
 

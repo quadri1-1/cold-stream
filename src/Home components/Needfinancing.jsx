@@ -3,6 +3,7 @@ import loan from "../assets/loan.png";
 import "../styles/needfinancing.css";
 const Needfinancing = () => {
   return (
+    <div>
     <div className="finan">
       <h4>Need Financing for a project? Check out our options below!</h4>
       <div className="loan">
@@ -43,7 +44,8 @@ const Needfinancing = () => {
           </p>
         </div>
       </div>
-    </div>
+      </div>
+      </div>
   );
 };
 

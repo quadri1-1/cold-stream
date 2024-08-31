@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import "../styles/direction.css";
 const Directions = () => {
   return (
-    <div>
-      <div className="direct">
-        <div className="property">
+    <div className="">
+      <div className="direct container">
+        <div className="property ">
           <h5>COLD STREAM FARM PROPERTY MANAGEMENNT</h5>
           <h5>ELLICOTT CITY DIVISION LLC</h5>
           <p>780 Hallow RD Ellicott City, Md 21043 </p>

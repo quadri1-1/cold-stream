@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Opensale from '../Openbox/Opensale'
 const Openbox = () => {
   return (
-    <div>Openbox</div>
+    <div>
+      <Opensale/>
+    </div>
   )
 }
 

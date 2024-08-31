@@ -68,3 +68,8 @@
         
     }
 }
+@media(max-width: 900px){
+    .map{
+        width: 95%;
+    }
+}
