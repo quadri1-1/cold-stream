@@ -223,11 +223,11 @@ const RepairRequest = () => {
                     {errors.problemDescription && <span className="error">{errors.problemDescription}</span>}
                 </div>
 
-                {/* CAPTCHA placeholder */}
+                {/* CAPTCHA placeholder
                 <div className="captcha">
                     <label>CAPTCHA *</label>
                     <p>CAPTCHA verification will go here</p>
-                </div>
+                </div> */}
 
                 <button type="submit">Submit Repair Request</button>
             </form>
