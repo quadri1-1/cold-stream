@@ -1,8 +1,11 @@
 import React from 'react'
+import Apptsale from '../Appt for sale/Apptsale'
 
 const Propertiesforsale = () => {
   return (
-    <div>Propertiesforsale</div>
+    <div>
+      <Apptsale/>
+    </div>
   )
 }
 
