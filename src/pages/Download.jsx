@@ -65,9 +65,6 @@ const Download = () => {
           <Link id="land">
             <button>Download Adobe PDF Version Of Application</button>
           </Link>
-          <Link id="land">
-            <button>Download Microsoft Word Version Of Application</button>
-          </Link>
         </div>
       </div>
     </div>

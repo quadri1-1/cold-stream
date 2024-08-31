@@ -16,6 +16,7 @@ import Ownerpotal from './pages/Ownerpotal'
 import UtilityContacts from "./pages/UtilityContacts"
 import RepairRequest from "./pages/RepairRequest"
 import Download from './pages/Download'
+import Details1 from './Details/Details1'
 function App() {
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path='/utility' element={<UtilityContacts />} />
           <Route path='/download' element={<Download />} />
           <Route path='/online' element={<Onlinepay />} />
+          <Route path='/detail' element={<Details1/> } />
         </Routes>
         <Needfinancing />
         <Directions/>
