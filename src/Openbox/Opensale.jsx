@@ -2,7 +2,7 @@ import React from "react";
 import "../Openbox/openbox.css";
 const Opensale = () => {
   return (
-    <div>
+    <div className="saled">
       <div className="sale">
         <p>
           CSFPM Open Box is our new store front located at 780 HOLLOW RD
@@ -24,7 +24,7 @@ const Opensale = () => {
               <p>•EXTENTION CORDS</p>
             </div>
             <div>
-              <p>•FLOORINF</p>
+              <p>•FLOORING</p>
               <p>•TOILET</p>
               <p>•KITCHEN CABINET</p>
               <p>•BRAND NEW STOVE (ELECTRIC AND GAS )</p>
@@ -37,6 +37,14 @@ const Opensale = () => {
           </div>
         </div>
         <p>GENERAL PUBLIC, TRADESMEN AND CONTRACTOR WELCOME</p>
+      </div>
+      <div className="born">
+        <hr className="hrs" />
+        <p>
+          Need a skilled technician to install any of this material for you?
+          Let us know! We have several skilled technicians from HVAC technicians
+          to plumbing, painting, electrical, carpentry, and roofing
+        </p>
       </div>
     </div>
   );

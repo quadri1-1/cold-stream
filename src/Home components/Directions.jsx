@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/direction.css";
 const Directions = () => {
   return (
-    <div className="">
+    <div className="dog">
       <div className="direct container">
         <div className="property ">
           <h5>COLD STREAM FARM PROPERTY MANAGEMENNT</h5>
@@ -33,12 +33,11 @@ const Directions = () => {
         <h6>Tenants</h6>
         <div className="tion">
           <Link id="tion">Repair Request</Link>
-          <Link id="tion">Rental Search</Link>
-          <Link id="tion">Utility Contact</Link>
-          <Link id="tion">Online Payment</Link>
+          <Link  id="tion" to="/utility">Utility Contact</Link>
+          <Link id="tion" to="/online">Online Payment</Link>
         </div>
       </div>
-      <div>
+      <div style={{width: "100%"}}>
         <hr />
         <p className="tions">Copyright 2024 ©️ Cold Stream Farm LLC - Ellicott city division </p>
       </div>

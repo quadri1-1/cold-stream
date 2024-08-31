@@ -13,6 +13,7 @@ import Owner from './owner Componenr/Owner'
 import Ownerpotal from './pages/Ownerpotal'
 import UtilityContacts from "./pages/UtilityContacts"
 import Download from './pages/Download'
+import Onlinepay from './Openbox/Onlinepay'
 function App() {
 
 
@@ -30,7 +31,8 @@ function App() {
           <Route path='/owner' element={<Owner />} />
           <Route path='/ownerpot' element={<Ownerpotal />} />
           <Route path='/utility' element={<UtilityContacts />} />
-          <Route path='/download' element={ <Download/>}/>
+          <Route path='/download' element={<Download />} />
+          <Route path='/online' element={<Onlinepay />} />
         </Routes>
         <Needfinancing />
         <Directions/>

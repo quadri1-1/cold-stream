@@ -24,8 +24,8 @@ const Appt1i = () => {
         </p>
         <hr />
         <p className="lol">
-          Address <span> 502 N 8th st Apt 1FAllentown, Pennsylvania 18102</span>
-          <Link>Map it</Link>
+          Address <span> 502 N 8th st Apt 1FAllentown, Pennsylvania <Link>Map it</Link></span>
+          
         </p>
         <hr />
         <p className="lol">

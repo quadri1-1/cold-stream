@@ -21,6 +21,14 @@
 #tion{
     text-decoration: none;
     color: #666;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+.dog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #tion :hover{
     color: rgb(55, 55, 231);

@@ -1,58 +1,76 @@
-.gang{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.gang {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.ford{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    
+.ford {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-.ford input{
-    width: 1000px;
-    height: 40px;
-    margin-bottom: 10px;
-    border: 1px solid black;
+.ford input {
+  width: 1000px;
+  height: 40px;
+  margin-bottom: 10px;
+  border: 1px solid black;
 }
-.fords input{
-    width: 1000px;
-    height: 500px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: start;
+.fords input {
+  width: 1000px;
+  height: 500px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: start;
 }
-.fords{
-    display: flex;
-    flex-direction: column;
+.fords {
+  display: flex;
+  flex-direction: column;
 }
 .ini {
-    width: 100px;
-    height: 39px;
-    background: #1e4d73;
-    color: #FFF;
-    font-family: var(--rub);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 15.863px;
-    border: none;
-    margin-top: 10px;
-    border-radius: 5px;
+  width: 100px;
+  height: 39px;
+  background: #1e4d73;
+  color: #fff;
+  font-family: var(--rub);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 15.863px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.gland {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.gland img {
+  width: 40px;
+}
+.gland h5 {
+  text-align: center;
+  color: black;
+  font-family: var(--open);
+  width: 90%;
+  font-size: 18px;
+  margin-top: 5px;
+}
+@media (max-width: 900px) {
+    .ford input {
+        width: 600px;
+    }
 
+    .fords input {
+        width: 600px;
+        height: 250px;
+    }
 }
-.gland{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+@media (max-width: 600px) {
+  .ford input {
+    width: 320px;
+  }
+  .fords input {
+    width: 320px;
+    height: 250px;
+  }
 }
-.gland img{
-    width: 40px;
-}
-.gland h5{
-    text-align: center;
-    color: black;
-    font-family: var(--open);
-    width: 90%;
-    font-size: 18px;
-    margin-top: 5px;
-}
+
