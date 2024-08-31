@@ -191,7 +191,7 @@ const RepairRequest = () => {
                             checked={formData.authorization} 
                             onChange={handleChange}
                         />
-                        <strong>By checking this box you agree to the above terms. *</strong><br />F
+                        <strong>By checking this box you agree to the above terms. *</strong><br />
                         I am authorized to make the maintenance request.
                     </label>
                     {errors.authorization && <span className="error">{errors.authorization}</span>}
@@ -213,7 +213,7 @@ const RepairRequest = () => {
                 </div>
 
                 <div className="problem-description">
-                    <label htmlFor="problemDescription"> <strong>Description of Problem  *</strong></label>
+                    <label htmlFor="problemDescription"> <strong>Description of Problem: Be sure to include as many details as possible: the "who, what, where when, why, how" of the problem. This insures an accurate description of the problem in order to determine the quickest, cost effective, quality resolution.  *</strong></label>
                     <textarea 
                         id="problemDescription" 
                         name="problemDescription" 

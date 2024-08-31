@@ -91,6 +91,7 @@ body {
 
 .maintenance-access input[type="radio"] {
     margin-top: 4px;
+    width: 0;
 }
 
 .form-container button[type="submit"] {
