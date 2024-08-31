@@ -47,7 +47,7 @@ const Details1 = () => {
           </section>
         </p>
         <div id="tap-wee">
-          <Link to="pre-screen-rental-application" id="tack">
+          <Link to="/sales-application" id="tack">
             <button className="download">Fill Out Application Today</button>
           </Link>
         </div>

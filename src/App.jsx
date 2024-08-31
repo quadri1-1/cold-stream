@@ -18,6 +18,8 @@ import RepairRequest from "./pages/RepairRequest"
 import Download from './pages/Download'
 import Details1 from './Details/Details1'
 import Details2 from './Details/Details2'
+import Filloutapplication from './Rentalproprties components/FIlloutapplication'
+import Employeeportal from './pages/Employeeportal'
 function App() {
 
 
@@ -40,7 +42,9 @@ function App() {
           <Route path='/download' element={<Download />} />
           <Route path='/online' element={<Onlinepay />} />
           <Route path='/detail' element={<Details1 />} />
-          <Route path='/detail2' element={<Details2/>} />
+          <Route path='/detail2' element={<Details2 />} />
+          <Route path='/sales-application' element={<Filloutapplication />} />
+          <Route path='/employee' element={<Employeeportal/>} />
         </Routes>
         <Needfinancing />
         <Directions/>

@@ -9,8 +9,7 @@ const Directions = () => {
           <h5>COLD STREAM FARM PROPERTY MANAGEMENNT</h5>
           <h5>ELLICOTT CITY DIVISION LLC</h5>
           <p>780 Hallow RD Ellicott City, Md 21043 </p>
-          <p>Phone: (610)432-1553</p>
-          <p>Fax(800)977-4104</p>
+          <p>Phone: 443-364-0723</p>
           <p>Email:coldfarm.stream@gmail.com</p>
           <p>Broker of Records </p>
         </div>
@@ -32,7 +31,7 @@ const Directions = () => {
       <div id="tions">
         <h6>Tenants</h6>
         <div className="tion">
-          <Link id="tion">Repair Request</Link>
+          <Link id="tion" to="/repair-request">Repair Request</Link>
           <Link  id="tion" to="/utility">Utility Contact</Link>
           <Link id="tion" to="/online">Online Payment</Link>
         </div>
