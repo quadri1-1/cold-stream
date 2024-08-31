@@ -296,8 +296,8 @@ const OnlineRentalApplication = () => {
                             onChange={handleChange}
                         >
                             <option value="">Select One</option>
-                            <option value="">House Rental</option>
-                            <option value="">Apartment</option>
+                            <option value="House Rental">House Rental</option>
+                            <option value="Apartment">Apartment</option>
                         </select>
                     </label>
                     <label htmlFor="rentalArea">What area are you looking to rent?
@@ -308,10 +308,10 @@ const OnlineRentalApplication = () => {
                             onChange={handleChange}
                         >
                             <option value="">Select One</option>
-                            <option value="">Allentown</option>
-                            <option value="">Bethlehem</option>
-                            <option value="">Easton</option>
-                            <option value="">Walnutport</option>
+                            <option value="Allentown">Allentown</option>
+                            <option value="Bethlehem">Bethlehem</option>
+                            <option value="Easton">Easton</option>
+                            <option value="Walnutport">Walnutport</option>
                         </select>
                     </label>
                     <label htmlFor="bedrooms">How many bedrooms are you looking for? *
@@ -342,9 +342,9 @@ const OnlineRentalApplication = () => {
                             value={formData.landlordReference}
                             onChange={handleChange}
                         >
-                            <option value="">Select One</option>
+                            <option value="none">Select One</option>
                             <option value="yes">Yes</option>
-                            <option selected value="no">No</option>
+                            <option selected value="">No</option>
                         </select>
                     </label>
                     <label htmlFor="pets">Do you have any pets? (We have a no-pet policy.)
@@ -354,9 +354,9 @@ const OnlineRentalApplication = () => {
                             value={formData.pets}
                             onChange={handleChange}
                         >
-                            <option value="">Select One</option>
+                            <option value="none">Select One</option>
                             <option value="yes">Yes</option>
-                            <option selected value="no">No</option>
+                            <option selected value="">No</option>
                         </select>
                     </label>
                     <label htmlFor="landlordJudgment">Have you ever had a landlord judgement against you or been evicted before?
@@ -366,9 +366,9 @@ const OnlineRentalApplication = () => {
                             value={formData.landlordJudgment}
                             onChange={handleChange}
                         >
-                            <option value="">Select One</option>
+                            <option value="none">Select One</option>
                             <option value="yes">Yes</option>
-                            <option selected value="no">No</option>
+                            <option selected value="">No</option>
                         </select>
                     </label>
                     <label htmlFor="smokingCompliance">Our properties are non-smoking. Are you able to comply?
@@ -378,13 +378,14 @@ const OnlineRentalApplication = () => {
                             value={formData.smokingCompliance}
                             onChange={handleChange}
                         >
-                            <option value="">Select One</option>
+                            <option value="none">Select One</option>
                             <option value="yes">Yes</option>
-                            <option selected value="no">No</option>
+                            <option selected value="">No</option>
                         </select>
                     </label>
                     <label htmlFor="reasonForMove">Why are you looking to move?
-                        <textarea 
+                        <input
+                            type="text"
                             id="reasonForMove" 
                             name="reasonForMove" 
                             value={formData.reasonForMove} 
@@ -409,15 +410,9 @@ const OnlineRentalApplication = () => {
                             onChange={handleChange}
                         />
                     </label>
-                    <label htmlFor="backgroundIssues">Any issues we should know about before running a background check?
-                        <textarea 
-                            id="backgroundIssues" 
-                            name="backgroundIssues" 
-                            value={formData.backgroundIssues} 
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label htmlFor="backgroundInfo">If you are approved to the next phase of our application process, a background check will be required on all adults in the household. Please provide any information you feel would be helpful in the event something does come up in the background check.
+                    <label htmlFor="backgroundInfo">
+                        <figcaption>Any issues we should know about before running a background check?</figcaption> 
+                        If you are approved to the next phase of our application process, a background check will be required on all adults in the household. Please provide any information you feel would be helpful in the event something does come up in the background check.
                         <textarea 
                             id="backgroundInfo" 
                             name="backgroundInfo" 
@@ -427,7 +422,7 @@ const OnlineRentalApplication = () => {
                     </label>
                 </div>
 
-                <button type="submit">Submit</button>
+                <button type="submit">Submit Pre-Rental Request</button>
             </form>
         </div>
     );
