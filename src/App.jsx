@@ -7,6 +7,7 @@ import About from './pages/About'
 import Openbox from './pages/Openbox'
 import Propertiesforsale from './pages/Propertiesforsale'
 import Rentalproperties from './pages/Rentalproperties'
+import OnlineRentalApplication from './pages/OnlineRentalApplication'
 function App() {
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/openbox' element={<Openbox/> } />
           <Route path='/sale' element={<Propertiesforsale />} />
           <Route path='/rent' element={<Rentalproperties/> } />
+          <Route path='/pre-screen-rental-application' element={<OnlineRentalApplication/>}></Route>
 
         </Routes>
       </Router>

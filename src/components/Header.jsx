@@ -34,7 +34,7 @@ const Header = () => {
           <div className="person">
             <img src={person} alt="" />
             <NavDropdown title="Apply Today" id="basic-nav-dropdown">
-              <Link>Online Rental Application</Link>
+              <Link to="/pre-screen-rental-application">Online Rental Application</Link>
               <Link>Download Rental Application</Link>
             </NavDropdown>
           </div>
