@@ -6,6 +6,7 @@ import person from "../assets/person.png";
 import people from "../assets/people.png";
 import "../styles/header.css";
 import { Link } from "react-router-dom";
+import logo from "../assets/CFPM.png";
 const Header = () => {
   return (
     <div>
@@ -19,7 +20,9 @@ const Header = () => {
                 className="repairs"
                 id="basic-nav-dropdown "
               >
-                <Link to="/repair-request" className="repair">Repair Request</Link>
+                <Link to="/repair-request" className="repair">
+                  Repair Request
+                </Link>
                 <br />
                 <Link to="/utility" className="repair">
                   Utility Contacts
@@ -44,7 +47,9 @@ const Header = () => {
                 title="Apply Today"
                 id="basic-nav-dropdown"
               >
-                <Link to="/pre-screen-rental-application" className="repair">Online Rental Application</Link>
+                <Link to="/pre-screen-rental-application" className="repair">
+                  Online Rental Application
+                </Link>
                 <br />
                 <Link to="/download" className="repair">
                   Download Rental Application
@@ -56,8 +61,8 @@ const Header = () => {
         </div>
       </div>
       <div id="head">
-        <div>
-          <img src="" alt="logo" />
+        <div className="lego">
+          <img src={logo} alt="logo" />
         </div>
         <div className="prop"></div>
         <div className="head sticky top-0 z[20]">

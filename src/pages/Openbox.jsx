@@ -1,8 +1,10 @@
 import React from 'react'
 import Opensale from '../Openbox/Opensale'
+import Imageslider from '../Imageslider'
 const Openbox = () => {
   return (
-    <div>
+    <div >
+      <Imageslider/>
       <Opensale/>
     </div>
   )

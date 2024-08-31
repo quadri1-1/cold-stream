@@ -10,12 +10,11 @@ import Appt5 from "./Appt5";
 import Appt6 from "./Appt6";
 import Appt7 from "./Appt7";
 import Appt9 from "./Appt9";
-import Appt10 from "./Appt10";
 
 const List = () => {
   return (
-    <div>
-      <div>
+    <div >
+      <div className="tap">
         <h1>Listing ofAvailable rental Properties</h1>
       </div>
       <Appt1i />
@@ -26,7 +25,6 @@ const List = () => {
       <Appt6 />
       <Appt7 />
       <Appt9 />
-      <Appt10/>
 
     </div>
   );

@@ -8,7 +8,7 @@ import Openbox from './pages/Openbox'
 import Propertiesforsale from './pages/Propertiesforsale'
 import Rentalproperties from './pages/Rentalproperties'
 import OnlineRentalApplication from './pages/OnlineRentalApplication'
-
+import Onlinepay from "./Openbox/Onlinepay"
 import Needfinancing from './Home components/Needfinancing'
 import Directions from './Home components/Directions'
 import Owner from './owner Componenr/Owner'

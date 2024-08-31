@@ -24,8 +24,11 @@ const Appt1i = () => {
         </p>
         <hr />
         <p className="lol">
-          Address <span> 502 N 8th st Apt 1FAllentown, Pennsylvania <Link>Map it</Link></span>
-          
+          Address{" "}
+          <span>
+            {" "}
+            502 N 8th st Apt 1FAllentown, Pennsylvania 
+          </span>
         </p>
         <hr />
         <p className="lol">
@@ -44,7 +47,9 @@ const Appt1i = () => {
           </span>
         </p>
         <hr />
-        <Link>View Details</Link>
+        <div id="tap-wee">
+          <Link to="/pre-screen-rental-application" id="tack" >Fill Out Application Today</Link>
+        </div>
       </div>
     </div>
   );

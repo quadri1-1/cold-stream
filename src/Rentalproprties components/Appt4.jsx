@@ -43,7 +43,9 @@ const Appt4 = () => {
           </span>
         </p>
         <hr />
-        <Link>View Details</Link>
+         <div id="tap-wee">
+          <Link to="/pre-screen-rental-application" id="tack" >Fill Out Application Today</Link>
+        </div>
       </div></div>
   )
 }

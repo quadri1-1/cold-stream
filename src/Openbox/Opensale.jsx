@@ -1,8 +1,13 @@
 import React from "react";
 import "../Openbox/openbox.css";
+import logo from "../assets/CFPM.png"
 const Opensale = () => {
   return (
     <div className="saled">
+      <div></div>
+      <div className="legos"> 
+        <img src={logo} alt="" />
+      </div>
       <div className="sale">
         <p>
           CSFPM Open Box is our new store front located at 780 HOLLOW RD

@@ -1,13 +1,12 @@
-import React from "react";
-import "../styles/list.css";
-import { Link } from "react-router-dom";
-const Appt3 = () => {
+import React from 'react'
+
+const Apptsale = () => {
   return (
-    <div>
       <div>
+          <div>
         <hr />
         <p className="lol">
-          Type of Property <span>Apartment</span>
+          Type of Property <span>House</span>
         </p>
         <hr />
         <p className="lol">
@@ -17,7 +16,7 @@ const Appt3 = () => {
             {" "}
             <img
               style={{ width: "200px", height: "200px", marginRight: "10px" }}
-              src="https://rentchasers.com/wp-content/uploads/2024/07/20240723_094247-768x1024.jpg"
+              src="https://rentchasers.com/wp-content/uploads/2024/07/20240426_130106-768x1024.jpg"
               alt=""
             />
           </span>
@@ -27,23 +26,23 @@ const Appt3 = () => {
           Address{" "}
           <span>
             {" "}
-            Garages available for rent Allentown Allentown, Pennsylvania 18102
+            122 Market st. Bangor, Pennsylvania 18013
           </span>
         </p>
         <hr />
         <p className="lol">
-          Bedrooms <span>2</span>
+          Bedrooms <span>8</span>
         </p>
         <hr />
         <p className="lol">
-          Rent <span>$165.00</span>
+          Rent <span>$449,000.00</span>
         </p>
         <hr />
         <p className="lol">
           Property Description{" "}
           <span>
-            <p>•First Floor</p>
-            <p>•Gas Heated</p>
+            <p>•2 Half twin Houses (both halves of the property)</p>
+            <p>•one is 3 bedroom rented at $1195/ month</p>
           </span>
         </p>
         <hr />
@@ -52,7 +51,7 @@ const Appt3 = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Appt3;
+export default Apptsale

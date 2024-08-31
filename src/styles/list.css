@@ -16,3 +16,18 @@
     text-align: start;
     width: 250px;
 }
+.tap{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#tap-wee{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+#tack{
+    text-decoration: none;
+}

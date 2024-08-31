@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 import "../styles/list.css";
 import { Link } from "react-router-dom";
 const Appt12i = () => {
   return (
+    <div>
       <div>
-          <div>
         <hr />
         <p className="lol">
           Type of Property <span>House</span>
@@ -24,8 +24,7 @@ const Appt12i = () => {
         </p>
         <hr />
         <p className="lol">
-          Address{" "}
-          <span> 	1801 E Cedar st.Allentown, Pennsylvania 18109</span>
+          Address <span> 1801 E Cedar st.Allentown, Pennsylvania 18109</span>
         </p>
         <hr />
         <p className="lol">
@@ -40,17 +39,20 @@ const Appt12i = () => {
           Property Description{" "}
           <span>
             <p>•Three Bedroom house end of row/ Half detached</p>
-            <p>•Finished Basement</p> 
-            <p>•Gas Utilities</p> 
+            <p>•Finished Basement</p>
+            <p>•Gas Utilities</p>
             <p>•Central AC</p>
             <p>•2 Car detached garage</p>
           </span>
         </p>
         <hr />
-        <Link>View Details</Link>
+        <div id="tap-wee">
+          <Link to="/pre-screen-rental-application" id="tack" >Fill Out Application Today</Link>
+        </div>
+        
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Appt12i
+export default Appt12i;
