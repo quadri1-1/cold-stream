@@ -1,0 +1,168 @@
+/* onlineregform.css */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light background for the page */
+}
+
+/* Form Container */
+.rentalForm {
+    max-width: 900px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 20px 40px; /* Reduced horizontal padding for better spacing */
+}
+
+/* Form Description */
+.rentalForm p {
+    text-align: left;
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Form Element */
+.rentalForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased gap for a looser layout */
+}
+
+/* Labels */
+.rentalForm label {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: #333;
+}
+
+.rentalForm input[type="text"],
+.rentalForm input[type="email"],
+.rentalForm input[type="tel"],
+.rentalForm input[type="number"],
+.rentalForm textarea
+ {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    color: #333;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.rentalForm select {
+    width: 100%;
+    /* padding: 10px 12px; */
+    font-size: 14px;
+    border: 1px solid #222;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.rentalForm input[type="text"]:focus,
+.rentalForm input[type="email"]:focus,
+.rentalForm input[type="tel"]:focus,
+.rentalForm input[type="number"]:focus,
+.rentalForm textarea:focus,
+.rentalForm select:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+/* Textarea Specific */
+.rentalForm textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Section Headings */
+.name-section,
+.address-section,
+.contact-section,
+.property-section,
+.questions-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Removed background-color and borders for a flat look */
+}
+
+.name-section figcaption,
+.address-section figcaption,
+.contact-section figcaption,
+.property-section figcaption,
+.questions-section figcaption {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.add-flex,
+.contact-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+@media (min-width: 600px) {
+    .add-flex,
+    .contact-flex {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+.add-flex label,
+.contact-flex label {
+    flex: 1;
+}
+
+/* Radio Buttons Alignment */
+.contact-flex label {
+    display: flex;
+    align-items: center;
+}
+
+.contact-flex input[type="radio"] {
+    margin-left: 10px;
+}
+
+/* Submit Button */
+.rentalForm button[type="submit"] {
+    max-width: 250px;
+    padding: 4px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2b7bb9;
+    border: 2px solid #1f5a87;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rentalForm button[type="submit"]:hover {
+    background-color: #357abd;
+}
+
+.rentalForm button[type="submit"]:active {
+    background-color: #2d6ca4;
+}
+
+/* Error Messages */
+.error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+}

@@ -19,7 +19,7 @@ const Header = () => {
                 className="repairs"
                 id="basic-nav-dropdown "
               >
-                <Link className="repair">Repair Request</Link>
+                <Link to="/repair-request" className="repair">Repair Request</Link>
                 <br />
                 <Link to="/utility" className="repair">
                   Utility Contacts
@@ -44,7 +44,7 @@ const Header = () => {
                 title="Apply Today"
                 id="basic-nav-dropdown"
               >
-                <Link className="repair">Online Rental Application</Link>
+                <Link to="/pre-screen-rental-application" className="repair">Online Rental Application</Link>
                 <br />
                 <Link to="/download" className="repair">
                   Download Rental Application
