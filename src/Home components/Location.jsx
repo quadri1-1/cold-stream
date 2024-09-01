@@ -11,7 +11,7 @@ const Location = () => {
         <h4>REVIEW OUR PROPERTY MANAGEMENT OPTIONS AVAILABLE</h4>
         <p>
           We'll help you find the right fit for your property:{" "}
-          <Link className="link">(610) 432-1553</Link>
+          <Link className="link">443-364-0723</Link>
         </p>
         <Link className="link" to="/contact">
           <button className="tobtn">Contact Us</button>

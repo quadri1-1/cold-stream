@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Apptsale = () => {
+const Apptsale2 = () => {
   return (
       <div>
           <div>
@@ -17,7 +17,7 @@ const Apptsale = () => {
             {" "}
             <img
               style={{ width: "200px", height: "200px", marginRight: "10px" }}
-              src="https://rentchasers.com/wp-content/uploads/gravity_forms/5-02805bedf342a230bfde6b19d478351e/2024/07/20231211_111401.jpg"
+              src="https://rentchasers.com/wp-content/uploads/2024/07/20240708_105604-768x1024.jpg"
               alt=""
             />
           </span>
@@ -27,24 +27,27 @@ const Apptsale = () => {
           Address{" "}
           <span>
             {" "}
-            122 Market st. Bangor, Pennsylvania 18013
+            1801 E Cedar st. Allentown, Pennsylvania 18109
           </span>
         </p>
         <hr />
         <p className="lol">
-          Bedrooms <span>8</span>
+          Bedrooms <span>3</span>
         </p>
         <hr />
         <p className="lol">
-          Property Price <span>$449,000.00</span>
+          Property Price <span>$240,000.00</span>
         </p>
         <hr />
         <p className="lol">
           Property Description{" "}
           <span>
-            <p>•2 Half twin Houses (both halves of the property)</p>
-                      <p>•one is 3 bedroom rented at $1195/ month</p>
-                      <p>•5 bedroom is listed for rent $1995/ month</p>
+            <p>•Three Bedroom house end of row/ Half detached</p>
+            <p>•one is 3 bedroom rented at $1195/ month</p>
+            <p>•Finished Basement</p>
+            <p>•Gas Utilities</p>
+            <p>•Central AC</p>
+            <p>•2 Car detached garage</p>
           </span>
               </p>
               <p className='lol'>
@@ -53,11 +56,11 @@ const Apptsale = () => {
             </p>
         <hr />
         <div id="tap-wee">
-          <Link to="/detail" id="tack" >View Details</Link>
+          <Link to="/detail2" id="tack" >View Details</Link>
         </div>
       </div>
     </div>
   )
 }
 
-export default Apptsale
+export default Apptsale2

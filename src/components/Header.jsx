@@ -57,7 +57,7 @@ const Header = () => {
               </NavDropdown>
             </div>
           </Link>
-          <p>610-432-1553</p>
+          <p>443-364-0723</p>
         </div>
       </div>
       <div id="head">
@@ -75,6 +75,9 @@ const Header = () => {
             </Link>
             <Link to="sale" className="repair">
               Properties For Sale
+            </Link>
+            <Link to="employee" className="repair">
+              Employee Portal
             </Link>
           </div>
           <div className="dark">

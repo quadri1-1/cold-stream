@@ -8,12 +8,6 @@ const Details1 = () => {
       <div>
         <hr />
         <p className="lol">
-          Type of Property <span>House</span>
-        </p>
-        <hr />
-
-        <hr />
-        <p className="lol">
           Address <span> 122 Market st. Bangor, Pennsylvania 18013</span>
         </p>
         <hr />
@@ -22,7 +16,7 @@ const Details1 = () => {
         </p>
         <hr />
         <p className="lol">
-          Rent <span>$449,000.00</span>
+          Property Price <span>$449,000.00</span>
         </p>
         <hr />
         <p className="lol">
@@ -38,20 +32,26 @@ const Details1 = () => {
           <span>3.00</span>
         </p>
         <hr />
+        <p
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+          }}
+          className="mag"
+        >
+          {" "}
+          Image Gallary
+          <section>
+            <Details1photo />
+          </section>
+        </p>
         <div id="tap-wee">
-          <Link to="pre-screen-rental-application" id="tack">
+          <Link to="/sales-application" id="tack">
             <button className="download">Fill Out Application Today</button>
           </Link>
         </div>
       </div>
-      <p>
-        {" "}
-        Property image
-        <section>
-          {" "}
-          <Details1photo />
-        </section>
-      </p>
     </div>
   );
 };
