@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 // import LoginForm from './LoginForm';
+import OnlineRentalApplication from './OnlineRentalApplication';
 
 const AdminPage = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -43,10 +44,36 @@ const AdminPage = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            
+                        {formData.map((data, index) => (
+                            <tr key={index}>
+                                <td>{data.propertyInterest}</td>
+                                <td>{data.firstName}</td>
+                                <td>{data.lastName}</td>
+                                <td>{data.streetAddress}</td>
+                                <td>{data.city}</td>
+                                <td>{data.state}</td>
+                                <td>{data.zipCode}</td>
+                                <td>{data.phone}</td>
+                                <td>{data.contactPreference}</td>
+                                <td>{data.propertyType}</td>
+                                <td>{data.rentalArea}</td>
+                                <td>{data.bedrooms}</td>
+                                <td>{data.occupants}</td>
+                                <td>{data.landlordReference}</td>
+                                <td>{data.pets}</td>
+                                <td>{data.landlordJudgment}</td>
+                                <td>{data.smokingCompliance}</td>
+                                <td>{data.reasonForMove}</td>
+                                <td>{data.employmentLength}</td>
+                                <td>{data.monthlyIncome}</td>
+                                <td>{data.backgroundInfo}</td>
+                            </tr>
+                        ))}
                         </tbody>
                     </table>
                 </div>
+            ) : (
+                // <LoginForm onLogin={handleLogin} />>
             )}
         </div>
     )
