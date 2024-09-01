@@ -1,30 +1,46 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import { Link, useNavigate } from "react-router-dom";
-import "../Employee portal/login.css";
+import "../Employee portal/login.css"; // Adjust the import path as necessary
 
-const LoginForm = ({ onLogin }) => {
+const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  console.log('onLogin prop: ', onLogin)
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === "admin" && password === "admin123") {
-      onLogin();
-      navigate("/employee/dashboard");
+
+    // Expected username and password
+    const expectedUsername = "admin";
+    const expectedPassword = "admin123";
+
+    // Simple authentication logic
+    if (username === expectedUsername && password === expectedPassword) {
+      console.log("Login successful!");
+      set "Login successful!"
+      navigate("/employee/dashboard"); // Navigate to the dashboard
     } else {
-      setError("Invalid username or password");
+      console.log("Invalid username or password");
+      setError("Invalid username or password. Please try again.");
+      alert("Hint: Username: admin, Password: admin123");
     }
   };
 
   return (
-    <div className="tea">
+    <div id="screen" className="tea">
       <div className="logg">
         <div className="hoted">
-          <form onSubmit={handleLogin}>
+          <h2>Login</h2>
+          <form action="/dashboard" onSubmit={handleLogin}>
             <div className="hot">
               <label className="yeasa" htmlFor="Email">
                 Email
@@ -35,7 +51,7 @@ const LoginForm = ({ onLogin }) => {
                 className="mail"
                 placeholder="elo@techstudio.com"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={handleUsernameChange}
                 required
               />
             </div>
@@ -49,11 +65,12 @@ const LoginForm = ({ onLogin }) => {
                 className="pass"
                 placeholder="Min 8 characters"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={handlePasswordChange}
                 required
               />
             </div>
-            {error && <p className="error">{error}</p>}
+            <p className="success">{successful_login_msg}</p>
+            {error && <p className="error" style={{ color: "red" }}>{error}</p>}
             <div className="hot">
               <button className="sub" type="submit">
                 Login
@@ -67,10 +84,6 @@ const LoginForm = ({ onLogin }) => {
       </div>
     </div>
   );
-};
-
-LoginForm.propTypes = {
-  onLogin: PropTypes.func.isRequired,
 };
 
 export default LoginForm;
