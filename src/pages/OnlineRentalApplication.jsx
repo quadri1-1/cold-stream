@@ -70,7 +70,8 @@ const OnlineRentalApplication = () => {
       console.log("Form validation passed");
 
       try {
-        const response = await fetch("https://script.google.com/macros/s/AKfycbyRxIGskmdi63isPdRDVp5WeFLm3SqteG_kvrSGUuQrycLxdxuiAmhnqUdviZBmhWIGYQ/exec", {
+        // Update the URL to your backend endpoint
+        const response = await fetch("http://localhost:3000/submit-form", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
