@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Employee portal/login.css";
 
 const LoginForm = ({ onLogin }) => {
@@ -8,10 +8,13 @@ const LoginForm = ({ onLogin }) => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  console.log('onLogin prop: ', onLogin)
+
   const handleLogin = (e) => {
     e.preventDefault();
     if (username === "admin" && password === "admin123") {
       onLogin();
+      navigate("/dashboard");
     } else {
       setError("Invalid username or password");
     }
@@ -66,7 +69,6 @@ const LoginForm = ({ onLogin }) => {
   );
 };
 
-// Adding prop types validation
 LoginForm.propTypes = {
   onLogin: PropTypes.func.isRequired,
 };

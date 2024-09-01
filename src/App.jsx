@@ -22,6 +22,7 @@ import Filloutapplication from './Rentalproprties components/FIlloutapplication'
 import Employeeportal from './pages/Employeeportal'
 import Scrolltotop from './components/Scrolltotop'
 import Backtotop from './Backtotop'
+import AdminPage from './Employee portal/AdminPage'
 function App() {
 
 
@@ -48,6 +49,7 @@ function App() {
           <Route path='/detail2' element={<Details2 />} />
           <Route path='/sales-application' element={<Filloutapplication />} />
           <Route path='/employee' element={<Employeeportal/>} />
+          <Route path='/employee/dashboard' element={<AdminPage />} />
         </Routes>
         <Needfinancing />
         <Backtotop/>
