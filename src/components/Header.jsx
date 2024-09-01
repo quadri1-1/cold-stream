@@ -57,13 +57,14 @@ const Header = () => {
               </NavDropdown>
             </div>
           </Link>
-          <p>443-364-0723</p>
+          <a className="number" href="tel:+1-443-364-0723">443-364-0723</a>
         </div>
       </div>
       <div id="head">
         <div className="lego">
           <img src={logo} alt="logo" />
         </div>
+        <div className="pos">
         <div className="prop"></div>
         <div className="head sticky top-0 z[20]">
           <div className="dark">
@@ -90,7 +91,8 @@ const Header = () => {
             </Link>
           </div>
         </div>
-        <div className="prop"></div>
+          <div className="prop"></div>
+          </div>
       </div>
     </div>
   );

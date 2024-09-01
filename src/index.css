@@ -38,4 +38,18 @@
     font-size: 18px;
     margin-bottom: 20px;
     padding-top: 10px;
-} 
+}
+.number{
+  text-decoration: none;
+  color: #666;
+}
+.number:hover{
+  text-decoration: underline;
+  color: blue;
+}
+.arrow{
+  background-color: #666;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}

@@ -20,14 +20,14 @@
 }
 #tion{
     text-decoration: none;
-    color: #666;
+    color: blue;
     align-items: center;
     display: flex;
     flex-direction: row;
     cursor: pointer;
 }
 #tion:hover{
-    color: black;
+    color: #666;
     font-weight: 600;
 }
 .dog{

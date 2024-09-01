@@ -9,7 +9,7 @@ const Directions = () => {
           <h5>COLD STREAM FARM PROPERTY MANAGEMENNT</h5>
           <h5>ELLICOTT CITY DIVISION LLC</h5>
           <p>780 Hallow RD Ellicott City, Md 21043 </p>
-          <p>Phone: 443-364-0723</p>
+          <p>Phone: <a  className="number" href="tel:+1-443-364-0723">443-364-0723</a></p>
           <p>Email:coldfarm.stream@gmail.com</p>
           <p>Broker of Records </p>
         </div>
