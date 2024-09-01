@@ -64,7 +64,6 @@ const Header = () => {
         <div className="lego">
           <img src={logo} alt="logo" />
         </div>
-        <div className="pos">
         <div className="prop"></div>
         <div className="head sticky top-0 z[20]">
           <div className="dark">
@@ -91,8 +90,7 @@ const Header = () => {
             </Link>
           </div>
         </div>
-          <div className="prop"></div>
-          </div>
+        <div className="prop"></div>
       </div>
     </div>
   );
