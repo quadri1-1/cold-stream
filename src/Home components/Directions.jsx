@@ -30,7 +30,7 @@ const Directions = () => {
       </div>
       <div id="tions">
         <h6>Tenants</h6>
-        <div className="tion">
+        <div className="tiond">
           <Link id="tion" to="/repair-request">Repair Request</Link>
           <Link  id="tion" to="/utility">Utility Contact</Link>
           <Link id="tion" to="/online">Online Payment</Link>

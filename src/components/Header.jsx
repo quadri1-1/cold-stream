@@ -70,6 +70,15 @@ const Header = () => {
             <Link to="/" className="repair">
               Home
             </Link>
+
+            <Link to="contact" className="repair">
+              Contact Us
+            </Link>
+            <Link to="openbox" className="repair">
+              Open Box
+            </Link>
+          </div>
+          <div className="dark">
             <Link to="/rent" className="repair">
               Rental Properties
             </Link>
@@ -78,14 +87,6 @@ const Header = () => {
             </Link>
             <Link to="employee" className="repair">
               Employee Portal
-            </Link>
-          </div>
-          <div className="dark">
-            <Link to="openbox" className="repair">
-              Open Box
-            </Link>
-            <Link to="contact" className="repair">
-              Contact Us
             </Link>
           </div>
         </div>

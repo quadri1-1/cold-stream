@@ -20,12 +20,14 @@ import Details1 from './Details/Details1'
 import Details2 from './Details/Details2'
 import Filloutapplication from './Rentalproprties components/FIlloutapplication'
 import Employeeportal from './pages/Employeeportal'
+import Scrolltotop from './components/Scrolltotop'
 function App() {
 
 
   return (
     <div>
       <Router>
+        <Scrolltotop/>
         <Header/>
        <Routes >
           <Route path='/' element={<Home />} />

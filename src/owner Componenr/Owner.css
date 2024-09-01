@@ -16,6 +16,12 @@
     flex-direction: column;
     align-items: center;
 }
+.owner h5{
+    text-align: center;
+}
+.owner p{
+    text-align: center;
+}
 .stone button{
     width: 90%;
     height: 40px;
