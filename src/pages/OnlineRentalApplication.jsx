@@ -30,7 +30,7 @@ const OnlineRentalApplication = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const [submissionStatus, setSubmissionStatus] = useState(""); // Add this line
+  const [submissionStatus, setSubmissionStatus] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -40,7 +40,6 @@ const OnlineRentalApplication = () => {
   const validateForm = () => {
     let formErrors = {};
 
-    // Check required fields
     if (!formData.firstName) formErrors.firstName = "First Name is required";
     if (!formData.lastName) formErrors.lastName = "Last Name is required";
     if (!formData.streetAddress)
@@ -66,22 +65,22 @@ const OnlineRentalApplication = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Data:", formData);
-  
+
     if (validateForm()) {
       console.log("Form validation passed");
-  
-      // Fetch request here
+
       try {
-        const response = await fetch("https://script.google.com/macros/s/AKfycbwbNG6o0aI4qxiAGgGFBQh9XPVHluDQ-XZAgWSXZrs0ru9ffTbdKJqCFjKavPfF9yG6-A/exec", {
+        // Update the URL to your backend endpoint
+        const response = await fetch("http://localhost:3000/submit-form", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
         });
-  
+
         console.log("Response status:", response.status);
-  
+
         if (response.ok) {
           setSubmissionStatus("Success! Your application has been submitted.");
         } else {
@@ -94,7 +93,8 @@ const OnlineRentalApplication = () => {
     } else {
       console.log("Form validation failed. Fix the errors and try again.");
     }
-  };  
+  };
+
 
   return (
     <div className="rentalForm">
@@ -526,7 +526,7 @@ const OnlineRentalApplication = () => {
 
         <button type="submit">Submit Rental Application</button>
           {submissionStatus && (
-            <p className="status-message">{submissionStatus}</p>
+            <p id="status-message">{submissionStatus}</p>
           )}
       </form>
     </div>
