@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Employee portal/login.css"
 
-const Login = () => {
+const LoginForm = () => {
   return (
     <div className="tea">
       <div className="logg">
@@ -41,4 +41,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginForm;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import LoginForm from './LoginForm';
-import OnlineRentalApplication from './OnlineRentalApplication';
+import OnlineRentalApplication from '../pages/OnlineRentalApplication';
 
 const AdminPage = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
