@@ -32,8 +32,8 @@ const Login = () => {
                 required
               />
             </div>
-            <div className="hot">  <button className="sub" type="submit">Login </button></div>
-           
+            <div className="hot">  <button className="sub" type="submit">Login </button>
+             <Link to="/" className="numbers">Go to Cold Stream Farm Property Management</Link></div>
           </form>
         </div>
       </div>

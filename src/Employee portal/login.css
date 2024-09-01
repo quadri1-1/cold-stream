@@ -46,6 +46,26 @@
     height: 100vh;
 }
 .logg{
-    padding: 100px;
+    padding-top: 100px;
     
+}
+.numbers{
+    text-decoration: none;
+    color: #666;
+    text-align: center;
+}
+.numbers:hover{
+    text-decoration: underline;
+    color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media(max-width:500px){
+    .hot input{
+        width: 90%;
+    }
+    .sub{
+        width: 90%;
+    }
 }
