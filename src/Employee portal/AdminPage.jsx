@@ -1,18 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import LoginForm from './Login';
+import React, { useState } from "react";
+import LoginForm from "./Login";
 
 const AdminPage = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [formData, setFormData] = useState([]);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    useEffect(() => {
-        const savedData = JSON.parse(localStorage.getItem('formSubmissions')) || [];
-        setFormData(savedData);
-    }, []);
-
-    const handleLogin = () => {
-        setIsLoggedIn(true);
-    };
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
 
     return (
         <div>
