@@ -14,7 +14,7 @@ const LoginForm = ({ onLogin }) => {
     e.preventDefault();
     if (username === "admin" && password === "admin123") {
       onLogin();
-      navigate("/dashboard");
+      navigate("/employee/dashboard");
     } else {
       setError("Invalid username or password");
     }
