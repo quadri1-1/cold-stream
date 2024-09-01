@@ -8,9 +8,9 @@ const UtilityContacts = () => {
         <div className='container' id='contain'>
             <img src={contact} alt="" />
               <h2>Utility Contacts</h2>
-              <p>PP&L (Electric) <Link className='lod'>1-800-342-5775</Link></p>
-              <p>UGI (Gas) <Link className='lod'>1-800-276-2722</Link></p>
-              <p>Service Electric (Cable) <Link className='lod'> 610-865-9100</Link></p>
+              <p>PP&L (Electric) <a className="number" href="tel:+1-443-364-0723">443-364-0723</a></p>
+              <p>UGI (Gas) <a className="number" href="tel:+1-443-364-0723">443-364-0723</a></p>
+              <p>Service Electric (Cable) <a className="number" href="tel:+1-443-364-0723">443-364-0723</a></p>
         </div>
     </div>
   )

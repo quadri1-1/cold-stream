@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Ownerpot = () => {
   return (
     <div className="container">
-      <div>
+      <div className="ownersbg">
         <h1>Owners Portal</h1>
       </div>
       <div className="monitor">
@@ -15,7 +15,7 @@ const Ownerpot = () => {
           <div>
             <div className="parle">
               <div className="log">
-                <img style={{ width: "30px" }} src={east} alt="" />
+                <img  src={east} alt="" />
                 <h3>Log In Now</h3>
               </div>
               <p>
@@ -25,7 +25,7 @@ const Ownerpot = () => {
             </div>
             <div className="parle">
               <div className="log">
-                <img style={{ width: "30px" }} src={east} alt="" />
+                <img  src={east} alt="" />
                 <h3>Need Assistance</h3>
               </div>
               <p>
@@ -35,7 +35,7 @@ const Ownerpot = () => {
             </div>
             <div className="parle">
               <div className="log">
-                <img style={{ width: "30px" }} src={east} alt="" />
+                <img  src={east} alt="" />
                 <h3>Looking for Property Management?</h3>
               </div>
               <p>
