@@ -45,7 +45,6 @@ const AdminPage = () => {
                         <tbody>
                             
                         </tbody>
-                        </tbody>
                     </table>
                 </div>
             )}
