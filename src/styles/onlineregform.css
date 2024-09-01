@@ -94,11 +94,11 @@ body {
     gap: 15px;
 }
 
-.name-section figcaption,
-.address-section figcaption,
-.contact-section figcaption,
-.property-section figcaption,
-.questions-section figcaption {
+.name-section legend,
+.address-section legend,
+.contact-section legend,
+.property-section legend,
+.questions-section legend {
     font-size: 18px;
     font-weight: bold;
     color: #444;
@@ -158,6 +158,17 @@ body {
 
 .error {
     width: 60%;
+    background-color: #f9d6d3;
+    color: #e82610;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 10px 20px;
+    border-left: 2px solid #e82610;
+    font-family: Poppins;
+}
+
+.status-message {
+    width: 100%;
     background-color: #f9d6d3;
     color: #e82610;
     font-size: 14px;
