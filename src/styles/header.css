@@ -20,6 +20,10 @@
     font-weight: 500;
     
 }
+.repair:hover {
+    color: black;
+    font-weight: 600;
+}
 .lack{
 width: 500px;
 }
@@ -88,5 +92,10 @@ width: 500px;
         display: flex;
         flex-direction: row;
         gap: 20px;
+    }
+}
+@media(max-width:320px){
+    .dark{
+        gap: 10px;
     }
 }

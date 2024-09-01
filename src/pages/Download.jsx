@@ -26,7 +26,7 @@ const Download = () => {
             list of available properties for rent. We suggest you try our
             website <Link id="land">not yet determined</Link> for a listing of
             ready-to-move-in properties. You can also contact our relocation
-            specialist Eli at <Link id="land">443-364-0723</Link> (Call or Text). Attached to 
+            specialist Eli at <a className="number" href="tel:+1-443-364-0723">443-364-0723</a> (Call or Text). Attached to 
             this letter is our requirements and qualifications to rent, please carefully 
             read over our qualifications page to ensure you meet them. We look forward to
             serving your housing needs.
@@ -42,7 +42,7 @@ const Download = () => {
             pruebe nuestro sitio web <Link id="land">not determined yet</Link> para
             obtener una lista de propiedades listas para mudarse. También puede
             comunicarse con nuestro especialista en reubicación Eli al{" "}
-            <Link id="land" >443-364-0723</Link> (llame o envíe un mensaje de texto).
+            <a className="number" href="tel:+1-443-364-0723">443-364-0723</a>(llame o envíe un mensaje de texto).
             Adjunto a esta carta se encuentran nuestros requisitos y
             calificaciones para alquilar, lea atentamente nuestra página de
             calificaciones para asegurarse de cumplirlos. Esperamos poder

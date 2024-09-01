@@ -13,7 +13,7 @@
     font-family: var(--open);
     font-size: 50px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 20px;
     letter-spacing: 0.6px;
     margin-bottom: 20px;
@@ -29,4 +29,13 @@
 }
 .lod{
     text-decoration: none;
+}
+@media(max-width: 500px){
+    #contain h2{
+        font-size: 20px;
+    }
+    #contain img{
+        width: 70px;
+        margin-bottom: 10px;
+    }
 }
