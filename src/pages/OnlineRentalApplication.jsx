@@ -30,6 +30,7 @@ const OnlineRentalApplication = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [submissionStatus, setSubmissionStatus] = useState(""); // Add this line
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -53,8 +54,8 @@ const OnlineRentalApplication = () => {
       formErrors.propertyInterest = "Property Interest is required";
     if (!formData.contactPreference)
       formErrors.contactPreference = "Contact Preference is required";
-
-    // Add more validations as necessary
+    if (!formData.smokingCompliance)
+      formErrors.smokingCompliance = "Smoking Compliance is required";
     if (!formData.reasonForMove)
       formErrors.reasonForMove = "Reason for moving is required";
 
@@ -62,17 +63,38 @@ const OnlineRentalApplication = () => {
     return Object.keys(formErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log("Form Data:", formData);
+  
     if (validateForm()) {
-      // If validation passes, submit the form data
-      console.log(formData);
+      console.log("Form validation passed");
+  
+      // Fetch request here
+      try {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbwbNG6o0aI4qxiAGgGFBQh9XPVHluDQ-XZAgWSXZrs0ru9ffTbdKJqCFjKavPfF9yG6-A/exec", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+  
+        console.log("Response status:", response.status);
+  
+        if (response.ok) {
+          setSubmissionStatus("Success! Your application has been submitted.");
+        } else {
+          setSubmissionStatus("Error! There was a problem submitting your application.");
+        }
+      } catch (error) {
+        console.error("Submission error:", error);
+        setSubmissionStatus("Error! There was a problem submitting your application.");
+      }
     } else {
-      // If validation fails, log or display errors
       console.log("Form validation failed. Fix the errors and try again.");
     }
-  };
+  };  
 
   return (
     <div className="rentalForm">
@@ -139,8 +161,7 @@ const OnlineRentalApplication = () => {
         </label>
 
         <div className="name-section">
-          <figcaption>Personal</figcaption>
-          <legend>
+          <legend>Personal</legend>
             <label htmlFor="firstName">
               <input
                 required
@@ -169,11 +190,10 @@ const OnlineRentalApplication = () => {
             {errors.lastName && (
               <span className="error">{errors.lastName}</span>
             )}
-          </legend>
         </div>
 
         <div className="address-section">
-          <figcaption>Current Address</figcaption>
+          <legend>Current Address</legend>
           <label htmlFor="streetAddress">
             <input
               required
@@ -318,7 +338,6 @@ const OnlineRentalApplication = () => {
           <label htmlFor="contactPreference" id="contactPreference">
             Best Option to Contact you?
             <div className="contact-flex">
-              <label htmlFor="phone">
                 <input
                   required
                   type="radio"
@@ -327,9 +346,7 @@ const OnlineRentalApplication = () => {
                   value="phone"
                   onChange={handleChange}
                 />
-                Phone
-              </label>
-              <label htmlFor="email">
+              <label htmlFor="phone">Phone</label>
                 <input
                   required
                   type="radio"
@@ -338,8 +355,7 @@ const OnlineRentalApplication = () => {
                   value="email"
                   onChange={handleChange}
                 />
-                Email
-              </label>
+              <label htmlFor="email">Email</label>
             </div>
           </label>
           {errors.contactPreference && (
@@ -414,9 +430,7 @@ const OnlineRentalApplication = () => {
             >
               <option value="none">Select One</option>
               <option value="yes">Yes</option>
-              <option selected value="">
-                No
-              </option>
+              <option selected value="no">No</option>
             </select>
           </label>
           <label htmlFor="pets">
@@ -430,9 +444,7 @@ const OnlineRentalApplication = () => {
             >
               <option value="none">Select One</option>
               <option value="yes">Yes</option>
-              <option selected value="">
-                No
-              </option>
+              <option selected value="no">No</option>
             </select>
           </label>
           <label htmlFor="landlordJudgment">
@@ -447,9 +459,7 @@ const OnlineRentalApplication = () => {
             >
               <option value="none">Select One</option>
               <option value="yes">Yes</option>
-              <option selected value="">
-                No
-              </option>
+              <option selected value="no">No</option>
             </select>
           </label>
           <label htmlFor="smokingCompliance">
@@ -463,9 +473,7 @@ const OnlineRentalApplication = () => {
             >
               <option value="none">Select One</option>
               <option value="yes">Yes</option>
-              <option selected value="">
-                No
-              </option>
+              <option selected value="no">No</option>
             </select>
           </label>
           <label htmlFor="reasonForMove">
@@ -496,12 +504,13 @@ const OnlineRentalApplication = () => {
               name="monthlyIncome"
               value={formData.monthlyIncome}
               onChange={handleChange}
+              placeholder="$"
             />
           </label>
           <label htmlFor="backgroundInfo">
-            <figcaption>
+            <legend>
               Any issues we should know about before running a background check?
-            </figcaption>
+            </legend>
             If you are approved to the next phase of our application process, a
             background check will be required on all adults in the household.
             Please provide any information you feel would be helpful in the
@@ -515,10 +524,17 @@ const OnlineRentalApplication = () => {
           </label>
         </div>
 
-        <button type="submit">Submit Pre-Rental Request</button>
+        <button type="submit">Submit Rental Application</button>
+          {submissionStatus && (
+            <p className="status-message">{submissionStatus}</p>
+          )}
       </form>
     </div>
   );
 };
 
 export default OnlineRentalApplication;
+
+
+
+
