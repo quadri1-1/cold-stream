@@ -26,7 +26,7 @@ const LoginForm = () => {
     // Simple authentication logic
     if (username === expectedUsername && password === expectedPassword) {
       console.log("Login successful!");
-      set "Login successful!"
+      setError("Login successful!");
       navigate("/employee/dashboard"); // Navigate to the dashboard
     } else {
       console.log("Invalid username or password");
@@ -69,8 +69,8 @@ const LoginForm = () => {
                 required
               />
             </div>
-            <p className="success">{successful_login_msg}</p>
-            {error && <p className="error" style={{ color: "red" }}>{error}</p>}
+            {error && <p className="success">{error}</p>}
+            {error && <p className="error">{error}</p>}
             <div className="hot">
               <button className="sub" type="submit">
                 Login
