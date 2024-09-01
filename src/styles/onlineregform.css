@@ -59,6 +59,7 @@ body {
 .rentalForm select {
     width: 100%;
     font-size: 14px;
+    padding: 10px 12px;
     border: 1px solid #222;
     border-radius: 4px;
     background-color: #fff;
@@ -167,11 +168,11 @@ body {
     font-family: Poppins;
 }
 
-.status-message {
+#status-message {
     width: 100%;
     background-color: #f9d6d3;
     color: #e82610;
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 5px;
     padding: 10px 20px;
     border-left: 2px solid #e82610;

@@ -72,7 +72,7 @@ const OnlineRentalApplication = () => {
   
       // Fetch request here
       try {
-        const response = await fetch("https://script.google.com/macros/s/AKfycbwbNG6o0aI4qxiAGgGFBQh9XPVHluDQ-XZAgWSXZrs0ru9ffTbdKJqCFjKavPfF9yG6-A/exec", {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbyRxIGskmdi63isPdRDVp5WeFLm3SqteG_kvrSGUuQrycLxdxuiAmhnqUdviZBmhWIGYQ/exec", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -526,7 +526,7 @@ const OnlineRentalApplication = () => {
 
         <button type="submit">Submit Rental Application</button>
           {submissionStatus && (
-            <p className="status-message">{submissionStatus}</p>
+            <p id="status-message">{submissionStatus}</p>
           )}
       </form>
     </div>
