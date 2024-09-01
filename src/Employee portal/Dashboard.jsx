@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Dashboard.css"; // Import the CSS file
+import "./Dashboard.css"; 
 
 const Dashboard = () => {
   const [formData] = useState([
@@ -28,25 +28,51 @@ const Dashboard = () => {
       monthlyIncome: "$5000",
       backgroundInfo: "No criminal record",
     },
-    // Add more data as needed
   ]);
 
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate("/login"); // Navigate back to login page
+    navigate("/employee");
   };
 
   return (
     <div className="dashboard">
       <div className="sidebar">
-        <h2 className="title">
-          <i className="fas fa-tachometer-alt"></i> Dashboard
-        </h2>
+      <aside className="sidebar">
+        <h2>Admin Dashboard</h2>
+        <nav>
+          <ul>
+            <li>Overview</li>
+            <li>Reports</li>
+            <li>Settings</li>
+            <li>Profile</li>
+          </ul>
+        </nav>
         <button onClick={handleLogout} className="logout-button">
-          <i className="fas fa-sign-out-alt"></i> Logout
+          <i className="fa fa-sign-out-alt"></i> Logout
         </button>
+      </aside>
       </div>
+      <main className="main-content">
+        <header className="dashboard-header">
+          <h1>Welcome, Admin</h1>
+        </header>
+        <section className="content">
+          <div className="card">
+            <h3>Statistics</h3>
+            <p>Display some statistics here</p>
+          </div>
+          <div className="card">
+            <h3>Recent Activities</h3>
+            <p>Display recent activities here</p>
+          </div>
+          <div className="card">
+            <h3>Notifications</h3>
+            <p>Display notifications here</p>
+          </div>
+        </section>
+      </main>
       <div className="content">
         <h2 className="heading">Form Submissions</h2>
         <table className="data-table">
