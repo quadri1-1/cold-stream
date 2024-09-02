@@ -32,7 +32,7 @@ const LoginForm = () => {
     } else {
       console.log("Invalid username or password");
       setError("Invalid username or password. Please try again.");
-      alert("Hint: Username: admin, Password: admin123");
+      // alert("Hint: Username: admin, Password: admin123");
     }
   };
 
@@ -43,13 +43,13 @@ const LoginForm = () => {
           <form action="/dashboard" onSubmit={handleLogin}>
             <div className="hot">
               <label className="yeasa" htmlFor="Email">
-                Email
+                Username
               </label>
               <input
                 type="text"
                 id="email"
                 className="mail"
-                placeholder="elo@techstudio.com"
+                placeholder="john_doe"
                 value={username}
                 onChange={handleUsernameChange}
                 required
@@ -63,7 +63,7 @@ const LoginForm = () => {
                 type="password"
                 id="password"
                 className="pass"
-                placeholder="Min 8 characters"
+                placeholder="Min 6 characters"
                 value={password}
                 onChange={handlePasswordChange}
                 required

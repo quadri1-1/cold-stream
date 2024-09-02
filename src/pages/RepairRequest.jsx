@@ -48,11 +48,27 @@ const RepairRequest = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validate()) {
-            console.log(formData);
-            // Submit form
+            const storedRepairRequests = JSON.parse(localStorage.getItem('repairRequests')) || [];
+            localStorage.setItem('repairRequests', JSON.stringify([...storedRepairRequests, formData]));
+            setFormData({
+                firstName: '',
+                lastName: '',
+                streetAddress: '',
+                addressLine2: '',
+                city: '',
+                state: 'PA',
+                zipCode: '',
+                phone: '',
+                email: '',
+                maintenanceAccess: '',
+                authorization: false,
+                pets: '',
+                problemDescription: '',
+            });
         }
     };
 
+    
     return (
         <div className="form-container">
             <form onSubmit={handleSubmit}>
