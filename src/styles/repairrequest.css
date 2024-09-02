@@ -72,6 +72,21 @@ body {
     gap: 15px;
 }
 
+.auth-label input {
+    width: 0;
+}
+
+.auth-label
+ {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
 .error {
     width: 60%;
     background-color: #f9d6d3;

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../styles/onlineregform.css";
 
 const OnlineRentalApplication = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     propertyInterest: "",
     firstName: "",
     lastName: "",
@@ -28,10 +28,12 @@ const OnlineRentalApplication = () => {
     monthlyIncome: "",
     backgroundIssues: "",
     backgroundInfo: "",
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState("");
+  const [statusType, setStatusType] = useState(""); // to differentiate between success and error
 
   const navigate = useNavigate();
 
@@ -69,11 +71,15 @@ const OnlineRentalApplication = () => {
       localStorage.setItem("formSubmissions", JSON.stringify(updatedSubmissions));
 
       setSubmissionStatus("Success! Your application has been submitted.");
+      setStatusType("success");
+      setFormData(initialFormData); // Clear form fields
       navigate("");
     } else {
-      console.log("Form validation failed. Fix the errors and try again.");
+      setSubmissionStatus("Form validation failed. Fix the errors and try again.");
+      setStatusType("error");
     }
   };
+
 
   return (
     <div className="rentalForm">
@@ -506,9 +512,12 @@ const OnlineRentalApplication = () => {
         </div>
 
         <button type="submit">Submit Rental Application</button>
-          {submissionStatus && (
-            <p id="status-message">{submissionStatus}</p>
-          )}
+        {submissionStatus && (
+        <p id="status-message" className={statusType}>
+        {submissionStatus}
+        </p>
+)}
+
       </form>
     </div>
   );

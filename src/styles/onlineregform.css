@@ -157,24 +157,26 @@ body {
     background-color: #2d6ca4;
 }
 
-.error {
-    width: 60%;
-    background-color: #f9d6d3;
-    color: #e82610;
-    font-size: 14px;
-    margin-top: 5px;
-    padding: 10px 20px;
-    border-left: 2px solid #e82610;
-    font-family: Poppins;
-}
-
 #status-message {
     width: 100%;
-    background-color: #f9d6d3;
-    color: #e82610;
     font-size: 16px;
     margin-top: 5px;
     padding: 10px 20px;
-    border-left: 2px solid #e82610;
+    border-left: 2px solid;
     font-family: Poppins;
-}
+  }
+  
+button + .success {
+    background-color: rgb(192, 247, 192);
+    border-color: rgb(5, 159, 5);
+    color: rgb(2, 152, 2);
+
+  }
+  
+button +  .error {
+    background-color: #f9d6d3;
+    border-color: #e82610;
+    color: #e82610;
+
+  }
+  
