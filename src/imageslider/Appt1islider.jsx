@@ -20,7 +20,7 @@ const slideImage = [
     caption: "first slide",
   },
   {
-    url: "https://photos.zillowstatic.com/fp/01d8475c6dbd33e7d91f9130d9a3cfe0-cc_ft_768.webp",
+    url: "https://photos.zillowstatic.com/fp/93adb3c1595303a5aef25e2828a8fd2a-cc_ft_768.webp",
     caption: "first slide",
   },
   {

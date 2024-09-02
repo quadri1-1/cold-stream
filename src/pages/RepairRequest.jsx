@@ -133,7 +133,7 @@ const RepairRequest = () => {
                         value={formData.state} 
                         onChange={handleChange}
                     >
-                        <option value="PA">Pennsylvania</option>
+                        <option value="PA">Maryland MD</option>
                     </select>
 
                     <label htmlFor="zipCode">ZIP Code*</label>
