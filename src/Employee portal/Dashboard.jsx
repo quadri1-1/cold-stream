@@ -4,6 +4,7 @@ import './Dashboard.css';
 
 const Dashboard = () => {
   const [formData, setFormData] = useState([]);
+  const [repairRequests, setRepairRequests] = useState([]);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const navigate = useNavigate();
   const tableWrapperRef = useRef(null);
@@ -12,6 +13,9 @@ const Dashboard = () => {
   useEffect(() => {
     const storedSubmissions = JSON.parse(localStorage.getItem("formSubmissions")) || [];
     setFormData(storedSubmissions);
+
+    const storedRepairRequests = JSON.parse(localStorage.getItem("repairRequests")) || [];
+    setRepairRequests(storedRepairRequests);
   }, []);
 
   const handleLogout = () => {
@@ -54,8 +58,11 @@ const Dashboard = () => {
           <a href="#stats" className="sidebar-link">
             <i className="fa-solid fa-chart-column"></i> Statistics
           </a>
-          <a href="#forms" className="sidebar-link">
-            <i className="fa-solid fa-table"></i> Form Submissions
+          <a href="#rentalApplications" className="sidebar-link">
+            <i className="fa-solid fa-table"></i> Rental Applications
+          </a>
+          <a href="#repairRequests" className="sidebar-link">
+            <i className="fa-solid fa-tools"></i> Repair Requests
           </a>
           <button onClick={handleLogout} className="btn-logout">
             <i className="fa-solid fa-right-from-bracket"></i> Logout
@@ -71,9 +78,13 @@ const Dashboard = () => {
             <h3>Total Submissions</h3>
             <p>{formData.length}</p>
           </div>
+          <div className="card">
+            <h3>Total Repair Requests</h3>
+            <p>{repairRequests.length}</p>
+          </div>
         </section>
         <section id="forms">
-          <h2>Form Submissions</h2>
+          <h2>Rental Application</h2>
           <div className="table-wrapper">
             <button
               className="arrow arrow-left"
@@ -146,6 +157,49 @@ const Dashboard = () => {
                       <td>{data.employmentLength}</td>
                       <td>{data.monthlyIncome}</td>
                       <td>{data.backgroundInfo}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section id="repairRequests">
+          <h2>Repair Requests</h2>
+          <div className="table-wrapper">
+            <div className="table-scroll" ref={scrollContainerRef} onWheel={handleWheel}>
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Street Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>ZIP Code</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Maintenance Access</th>
+                    <th>Authorization</th>
+                    <th>Pets</th>
+                    <th>Problem Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {repairRequests.map((data, index) => (
+                    <tr key={index}>
+                      <td>{data.firstName}</td>
+                      <td>{data.lastName}</td>
+                      <td>{data.streetAddress}</td>
+                      <td>{data.city}</td>
+                      <td>{data.state}</td>
+                      <td>{data.zipCode}</td>
+                      <td>{data.phone}</td>
+                      <td>{data.email}</td>
+                      <td>{data.maintenanceAccess}</td>
+                      <td>{data.authorization ? "Yes" : "No"}</td>
+                      <td>{data.pets}</td>
+                      <td>{data.problemDescription}</td>
                     </tr>
                   ))}
                 </tbody>
