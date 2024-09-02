@@ -1,6 +1,7 @@
 import React from 'react'
 import "../styles/list.css";
 import { Link } from "react-router-dom";
+import Appt4slider from '../imageslider/Appt4slider';
 const Appt4 = () => {
   return (
     <div><div>
@@ -13,33 +14,29 @@ const Appt4 = () => {
           {" "}
           Property image
           <span>
-            {" "}
-            <img
-              style={{ width: "200px", height: "200px", marginRight: "10px" }}
-              src="https://rentchasers.com/wp-content/uploads/2024/07/GetMedia-11.jpg"
-              alt=""
-            />
+            <Appt4slider/>
           </span>
         </p>
         <hr />
         <p className="lol">
           Address{" "}
-          <span> 2149 W Allen st. Allentown Allentown, Pennsylvania 18104</span>
+          <span> 7831 Old Litchfield Ln, Ellicott City, MD 21043</span>
         </p>
         <hr />
         <p className="lol">
-          Bedrooms <span>3</span>
+          Bedrooms <span>4</span>
         </p>
         <hr />
         <p className="lol">
-          Rent <span>$2,150.00</span>
+          Rent <span>$2,995/mo</span>
         </p>
         <hr />
         <p className="lol">
           Property Description{" "}
           <span>
-            <p>•Central AC</p>
-            <p>•detached Garage</p> 
+            <p>•Bedrooms: 4</p>
+          <p>•Bathrooms: 3</p> 
+          <p>•Total interior livable area: 1,440 sqft</p>
           </span>
         </p>
         <hr />

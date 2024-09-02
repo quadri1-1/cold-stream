@@ -17,7 +17,7 @@ const Apptsale2 = () => {
             {" "}
             <img
               style={{ width: "200px", height: "200px", marginRight: "10px" }}
-              src="https://rentchasers.com/wp-content/uploads/2024/07/20240708_105604-768x1024.jpg"
+              src="https://photos.zillowstatic.com/fp/b915d5443676ca734b668c9ab5c1f140-cc_ft_768.webp"
               alt=""
             />
           </span>
@@ -26,28 +26,31 @@ const Apptsale2 = () => {
         <p className="lol">
           Address{" "}
           <span>
-            {" "}
-            1801 E Cedar st. Allentown, Pennsylvania 18109
+            9516 Michaels Way, Ellicott City, MD 21042
           </span>
         </p>
         <hr />
         <p className="lol">
-          Bedrooms <span>3</span>
+          Bedrooms <span>4</span>
         </p>
         <hr />
         <p className="lol">
-          Property Price <span>$240,000.00</span>
+          Property Price <span>$675,000.00</span>
         </p>
         <hr />
         <p className="lol">
           Property Description{" "}
           <span>
-            <p>•Three Bedroom house end of row/ Half detached</p>
-            <p>•one is 3 bedroom rented at $1195/ month</p>
-            <p>•Finished Basement</p>
-            <p>•Gas Utilities</p>
-            <p>•Central AC</p>
+            <p>•Bedrooms: 4</p>
+            <p>•Bathrooms: 3</p>
+            <p>•Included: Built-In Microwave, Self Cleaning Oven, Washer, Water Heater, Dishwasher, Disposal, Dryer, Ice Maker, Refrigerator, Stove, Gas Water Heater</p>
+            <p>•Laundry: Main Level</p>
+            <p>•Room types: Living Room, Dining Room, Primary Bedroom, Bedroom 2, Bedroom 3, Bedroom 4, Kitchen, Family Room</p>
+            <p>Total interior livable area: 2,309 sqft</p>
             <p>•2 Car detached garage</p>
+            <p>•Heating: Forced Air, Natural Gas</p>
+            <p>Size: 0.55 Acres</p>
+            <p>Zoning: R20</p>
           </span>
               </p>
               <p className='lol'>

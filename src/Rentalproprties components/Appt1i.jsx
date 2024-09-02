@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/list.css";
 import { Link } from "react-router-dom";
+import Appt1islider from "../imageslider/Appt1islider";
 const Appt1i = () => {
   return (
     <div>
@@ -14,36 +15,35 @@ const Appt1i = () => {
           {" "}
           Property image
           <span>
-            {" "}
-            <img
-              style={{ width: "200px", height: "200px", marginRight: "10px" }}
-              src="https://rentchasers.com/wp-content/uploads/2024/07/20240722_111837-768x1024.jpg"
-              alt=""
-            />
+           <Appt1islider/>
           </span>
         </p>
         <hr />
         <p className="lol">
-          Address{" "}
+          Address:
           <span>
             {" "}
-            502 N 8th st Apt 1FAllentown, Pennsylvania 
+            6081 Otterbein Ln, Ellicott City, MD 21043
           </span>
         </p>
         <hr />
         <p className="lol">
-          Bedrooms <span>2</span>
+          Bedrooms: <span>  2</span>
         </p>
         <hr />
         <p className="lol">
-          Rent <span>$1,350.00</span>
+          Rent: <span>  $2,940+</span>
         </p>
         <hr />
         <p className="lol">
           Property Description{" "}
           <span>
-            <p>•First Floor</p>
-            <p>•Gas Heated</p>
+            <p>•Storage spacer</p>
+            <p>•Pet park</p>
+            <p>•Package service</p>
+            <p>•Onsite managemen</p>
+            <p>•Elevator</p>
+            <p>•Detached garage</p>
           </span>
         </p>
         <hr />

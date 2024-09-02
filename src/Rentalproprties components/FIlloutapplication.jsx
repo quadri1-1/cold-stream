@@ -92,11 +92,11 @@ const Filloutapplication = () => {
           >
             <option value="">Any property</option>
             
-            <option value="122-market-st-Bangor">
-              122 Market st. Bangor, Pennsylvania 18013
+            <option value="9516 Michaels Way, Ellicott City, MD 21042">
+              9516 Michaels Way, Ellicott City, MD 21042, US
             </option>
-            <option value="1801-e-cedar-st-allentown">
-              1801 E Cedar st. Allentown, Pennsylvania 18109
+            <option value="5208 Font Ave, Ellicott City, MD 21043">
+              5208 Font Ave, Ellicott City, MD 21043, US
             </option>
           </select>
           {errors.propertyInterest && (
@@ -314,22 +314,8 @@ const Filloutapplication = () => {
         </div>
 
         <div className="property-section">
-          <label htmlFor="propertyType">
-            What type of property are you looking for?
-            <select
-              required
-              name="propertyType"
-              id="propertyType"
-              value={formData.propertyType}
-              onChange={handleChange}
-            >
-              <option value="">Select One</option>
-              <option value="House Rental">House Rental</option>
-              <option value="Apartment">Apartment</option>
-            </select>
-          </label>
           <label htmlFor="rentalArea">
-            What area are you looking to rent?
+            What area are you looking to buy?
             <select
               required
               name="rentalArea"
@@ -338,10 +324,8 @@ const Filloutapplication = () => {
               onChange={handleChange}
             >
               <option value="">Select One</option>
-              <option value="Allentown">Allentown</option>
-              <option value="Bethlehem">Bethlehem</option>
-              <option value="Easton">Easton</option>
-              <option value="Walnutport">Walnutport</option>
+              <option value="Allentown">Ellicott</option>
+              <option value="Bethlehem">Baltimore</option>
             </select>
           </label>
           <label htmlFor="bedrooms">
@@ -355,52 +339,11 @@ const Filloutapplication = () => {
               onChange={handleChange}
             />
           </label>
-          <label htmlFor="occupants">
-            How many occupants will be living in the property? *
-            <input
-              required
-              type="number"
-              id="occupants"
-              name="occupants"
-              value={formData.occupants}
-              onChange={handleChange}
-            />
-          </label>
+          
         </div>
 
         <div className="questions-section">
-          <label htmlFor="landlordReference">
-            Do you have a non-relative landlord reference?
-            <select
-              required
-              name="landlordReference"
-              id="landlordReference"
-              value={formData.landlordReference}
-              onChange={handleChange}
-            >
-              <option value="none">Select One</option>
-              <option value="yes">Yes</option>
-              <option selected value="">
-                No
-              </option>
-            </select>
-          </label>
-          <label htmlFor="pets">
-            Do you have any pets? (We have a no-pet policy.)
-            <select
-              required
-              name="pets"
-              id="pets"
-              value={formData.pets}
-              onChange={handleChange}
-            >
-              <option value="none">Select One</option>
-              <option value="yes">Yes</option>
-              <option selected value="">
-                No
-              </option>
-            </select>
-          </label>
+          
           <label htmlFor="landlordJudgment">
             Have you ever had a landlord judgement against you or been evicted
             before?
@@ -409,22 +352,6 @@ const Filloutapplication = () => {
               name="landlordJudgment"
               id="landlordJudgment"
               value={formData.landlordJudgment}
-              onChange={handleChange}
-            >
-              <option value="none">Select One</option>
-              <option value="yes">Yes</option>
-              <option selected value="">
-                No
-              </option>
-            </select>
-          </label>
-          <label htmlFor="smokingCompliance">
-            Our properties are non-smoking. Are you able to comply?
-            <select
-              required
-              name="smokingCompliance"
-              id="smokingCompliance"
-              value={formData.smokingCompliance}
               onChange={handleChange}
             >
               <option value="none">Select One</option>

@@ -1,6 +1,7 @@
 import React from 'react'
 import "../styles/list.css";
 import { Link } from "react-router-dom";
+import Appt7slider from '../imageslider/Appt7slider';
 const Appt7 = () => {
   return (
     <div>
@@ -14,33 +15,36 @@ const Appt7 = () => {
           {" "}
           Property image
           <span>
-            {" "}
-            <img
-              style={{ width: "200px", height: "200px", marginRight: "10px" }}
-              src="https://rentchasers.com/wp-content/uploads/2024/08/20220606_102744-768x1024.jpg"
-              alt=""
-            />
+            <Appt7slider/>
           </span>
         </p>
         <hr />
         <p className="lol">
-          Address <span> 	2155 Main st apt b Northampton, Pennsylvania 18067</span>
+          Address <span> 	2273 Ballard Way, Ellicott City, MD 21042</span>
         </p>
         <hr />
         <p className="lol">
-          Bedrooms <span>1</span>
+          Bedrooms <span>6</span>
         </p>
         <hr />
         <p className="lol">
-          Rent <span>$925.00</span>
+          Rent <span>$5,865/mo</span>
         </p>
         <hr />
         <p className="lol">
           Property Description{" "}
           <span>
-            <p>•first floor</p>
-            <p>•remodeled</p>
-            <p>•electric utilities</p>
+            <p>•Bedrooms: 6</p>
+            <p>•Bathrooms: 5</p>
+            <p>•Ceiling Fan(s), Walk In Closet</p>
+            <p>•Flooring: Hardwood</p>
+            <p>•Furnished: Yes</p>
+            <p>•Total interior livable area: 5,308 sqft</p>
+            <p>•Included: Dishwasher, Dryer, Washer</p>
+            <p>•Has attached garage: Yes</p>
+            <p>•Spa features: Hottub Spa</p>
+            <p>•Exterior features: 2 Ovens, No Utilities included in rent, Walk In Closet</p>
+            <p>•Has spa: Yes</p>
           </span>
         </p>
         <hr />

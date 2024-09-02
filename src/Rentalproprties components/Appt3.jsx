@@ -1,49 +1,49 @@
 import React from "react";
 import "../styles/list.css";
 import { Link } from "react-router-dom";
+import Appt31slider from "../imageslider/Appt31slider";
 const Appt3 = () => {
   return (
     <div>
       <div>
         <hr />
         <p className="lol">
-          Type of Property <span>Apartment</span>
+          Type of Property <span>House</span>
         </p>
         <hr />
         <p className="lol">
           {" "}
           Property image
           <span>
-            {" "}
-            <img
-              style={{ width: "200px", height: "200px", marginRight: "10px" }}
-              src="https://rentchasers.com/wp-content/uploads/2024/07/20240723_094247-768x1024.jpg"
-              alt=""
-            />
+            <Appt31slider/>
           </span>
         </p>
         <hr />
         <p className="lol">
-          Address{" "}
+          Address:
           <span>
             {" "}
-            Garages available for rent Allentown Allentown, Pennsylvania 18102
+            4765 Hallowed Strm, Ellicott City, MD 21042
           </span>
         </p>
         <hr />
         <p className="lol">
-          Bedrooms <span>2</span>
+          Bedrooms: <span>3</span>
         </p>
         <hr />
         <p className="lol">
-          Rent <span>$165.00</span>
+          Rent: <span>$2,800/mo</span>
         </p>
         <hr />
         <p className="lol">
           Property Description{" "}
           <span>
-            <p>•First Floor</p>
-            <p>•Gas Heated</p>
+            <p>•Bedrooms: 3</p>
+            <p>•Bathrooms: 2</p>
+            <p>Full bathrooms: 2</p>
+            <p>Included: Dishwasher, Dryer, Refrigerator, Washer</p>
+            <p>Laundry: In Unit</p>
+            <p>Has attached garage: Yes</p>
           </span>
         </p>
         <hr />

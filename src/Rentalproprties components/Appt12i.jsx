@@ -24,25 +24,27 @@ const Appt12i = () => {
         </p>
         <hr />
         <p className="lol">
-          Address <span> 1801 E Cedar st.Allentown, Pennsylvania 18109</span>
+          Address <span> 3110 Batavia Ave, Baltimore, MD 21214</span>
         </p>
         <hr />
         <p className="lol">
-          Bedrooms <span>3</span>
+          Bedrooms <span>5</span>
         </p>
         <hr />
         <p className="lol">
-          Rent <span>$</span>
+          Rent <span>$3,200/mo</span>
         </p>
         <hr />
         <p className="lol">
           Property Description{" "}
           <span>
-            <p>•Three Bedroom house end of row/ Half detached</p>
-            <p>•Finished Basement</p>
-            <p>•Gas Utilities</p>
-            <p>•Central AC</p>
-            <p>•2 Car detached garage</p>
+            <p>•Bedrooms: 5</p>
+            <p>•Bathrooms: 2</p>
+            <p>•Included: Dishwasher, Dryer, Refrigerator, Washer</p>
+            <p>•Central Air</p>
+            <p>•Laundry: In Unit</p>
+            <p>Has basement: Yes</p>
+            <p>Total interior livable area: 1,944 sqft</p>
           </span>
         </p>
         <hr />

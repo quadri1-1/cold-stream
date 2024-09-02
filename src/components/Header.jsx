@@ -70,7 +70,9 @@ const Header = () => {
             <Link to="/" className="repair">
               Home
             </Link>
-
+            <Link to="/about" className="repair">
+              About Us
+            </Link>
             <Link to="contact" className="repair">
               Contact Us
             </Link>

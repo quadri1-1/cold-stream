@@ -98,48 +98,30 @@ const OnlineRentalApplication = () => {
             onChange={handleChange}
           >
             <option value="">Any property</option>
-            <option value="Offices Available for rent 1242-1244 W Hamilton St, Allentown,
-              Pennsylvania 18102, US">
-              Offices Available for rent 1242-1244 W Hamilton St, Allentown,
-              Pennsylvania 18102, US
+            <option value="6081 Otterbein Ln, Ellicott City, MD 21043">
+              6081 Otterbein Ln, Ellicott City, MD 21043, US
             </option>
-            <option value="2149 W Allen St. Allentown, Allentown, Pennsylvania 18104, US">
-              2149 W Allen St. Allentown, Allentown, Pennsylvania 18104, US
+            <option value="4765 Hallowed Strm, Ellicott City, MD 21042">
+              4765 Hallowed Strm, Ellicott City, MD 21042, US
             </option>
-            <option value="122 Market St., Bangor, Pennsylvania 18013, US">
-              122 Market St., Bangor, Pennsylvania 18013, US
+            <option value="7831 Old Litchfield Ln, Ellicott City, MD 21043">
+              7831 Old Litchfield Ln, Ellicott City, MD 21043, US
             </option>
-            <option value="1801 E Cedar St., Allentown, Pennsylvania 18109, US">
-              1801 E Cedar St., Allentown, Pennsylvania 18109, US
+            <option value="8120 Randolph Way, Ellicott City, MD 2104">
+              8120 Randolph Way, Ellicott City, MD 2104, US
             </option>
-            <option value="502 N 8th St Apt 1F, Allentown, Pennsylvania 18102, US">
-              502 N 8th St Apt 1F, Allentown, Pennsylvania 18102, US
+            <option value="9562 Old Route 108, Ellicott City, MD 21042">
+              9562 Old Route 108, Ellicott City, MD 21042, US
             </option>
             <option value="Garages available for rent Allentown, Allentown, Pennsylvania
               18102, US">
-              Garages available for rent Allentown, Allentown, Pennsylvania
-              18102, US
+              2273 Ballard Way, Ellicott City, MD 21042, US
             </option>
             <option value=" 834 W Chestnut St. Apt 2, Allentown, Pennsylvania 18102, US">
-              834 W Chestnut St. Apt 2, Allentown, Pennsylvania 18102, US
+              8756 Manahan Dr, Ellicott City, MD 21043, US
             </option>
             <option value="1508 Brookstone Place, Hellertown, Pennsylvania 18055, US">
-              1508 Brookstone Place, Hellertown, Pennsylvania 18055, US
-            </option>
-            <option value="533 Pine St, Bethlehem, Pennsylvania 18018, US">
-              533 Pine St, Bethlehem, Pennsylvania 18018, US
-            </option>
-            <option value="1402 W Liberty St. Apt 503, Allentown, Pennsylvania 18102, US">
-              1402 W Liberty St. Apt 503, Allentown, Pennsylvania 18102, US
-            </option>
-            <option value=" 2155 Main St Apt B, Northampton, Pennsylvania 18067, US">
-              2155 Main St Apt B, Northampton, Pennsylvania 18067, US
-            </option>
-            <option value=" 160 Pine St, Allentown, Pennsylvania 18102, US">
-              160 Pine St, Allentown, Pennsylvania 18102, US
-            </option>
-            <option value="213 E Bertch St Apt 2, Lansford, Pennsylvania 18232, US">
-              213 E Bertch St Apt 2, Lansford, Pennsylvania 18232, US
+              3110 Batavia Ave, Baltimore, MD 21214, US
             </option>
           </select>
           {errors.propertyInterest && (
@@ -375,10 +357,8 @@ const OnlineRentalApplication = () => {
               onChange={handleChange}
             >
               <option value="">Select One</option>
-              <option value="Allentown">Allentown</option>
-              <option value="Bethlehem">Bethlehem</option>
-              <option value="Easton">Easton</option>
-              <option value="Walnutport">Walnutport</option>
+              <option value="Allentown">Ellicott</option>
+              <option value="Bethlehem">Baltimore</option>
             </select>
           </label>
           <label htmlFor="bedrooms">

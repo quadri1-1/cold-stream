@@ -8,23 +8,31 @@ const Details1 = () => {
       <div>
         <hr />
         <p className="lol">
-          Address <span> 122 Market st. Bangor, Pennsylvania 18013</span>
+          Address <span> 5208 Font Ave, Ellicott City, MD 21043</span>
         </p>
         <hr />
         <p className="lol">
-          Bedrooms <span>8</span>
+          Bedrooms <span>4</span>
         </p>
         <hr />
         <p className="lol">
-          Property Price <span>$449,000.00</span>
+          Property Price <span>$630,000.00</span>
         </p>
         <hr />
         <p className="lol">
           Property Description{" "}
           <span>
-            <p>•2 Half twin Houses (both halves of the property)</p>
-            <p>•one is 3 bedroom rented at $1195/ month</p>
-            <p>•5 bedroom is listed for rent $1995/ month</p>
+            <p>•Bedrooms: 4</p>
+            <p>•Bathrooms: 3</p>
+            <p>•Included: Cooktop, Dishwasher, Dryer, Microwave, Oven - Wall, Refrigerator, Washer, Oven/Range - Electric, Electric Water Heater</p>
+            <p>•Laundry: Lower Level, Laundry Room</p>
+            <p>•Room types: Living Room, Dining Room, Kitchen, Family Room, Recreation Room, Storage Room, Utility Room</p>
+            <p>•Heating: Forced Air, Heat Pump, Electric</p>
+            <p>•Number of fireplaces: 1</p>
+            <p>•Total spaces: 20</p>
+            <p>•Uncovered spaces: 20</p>
+            <p>•Parking features: Asphalt Driveway, Driveway, Off Street</p>
+            <p>•Size: 0.72 Acres</p>
           </span>
         </p>
         <p className="lol">
