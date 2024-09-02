@@ -72,8 +72,8 @@ body {
     gap: 15px;
 }
 
-.auth-label input {
-    width: 0;
+.form-container input[type="checkbox"] {
+    width: 15px;
 }
 
 .auth-label
@@ -82,10 +82,8 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
-
-
 
 .error {
     width: 60%;
