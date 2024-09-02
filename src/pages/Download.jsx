@@ -24,7 +24,7 @@ const Download = () => {
           <p>
             If you are looking for a new home, we have a constantly changing
             list of available properties for rent. We suggest you try our
-            website <Link id="land">not yet determined</Link> for a listing of
+            website <Link id="land">www.coldstreamfarmpropertymanagement.com</Link> for a listing of
             ready-to-move-in properties. You can also contact our relocation
             specialist Eli at <a className="number" href="tel:+1-443-364-0723">443-364-0723</a> (Call or Text). Attached to 
             this letter is our requirements and qualifications to rent, please carefully 
@@ -39,7 +39,7 @@ const Download = () => {
           <p>
             Si está buscando un nuevo hogar, tenemos una lista en constante
             cambio de propiedades disponibles para alquilar. Le sugerimos que
-            pruebe nuestro sitio web <Link id="land">not determined yet</Link> para
+            pruebe nuestro sitio web <Link id="land">www.coldstreamfarmpropertymanagement.com</Link> para
             obtener una lista de propiedades listas para mudarse. También puede
             comunicarse con nuestro especialista en reubicación Eli al{" "}
             <a className="number" href="tel:+1-443-364-0723">443-364-0723</a>(llame o envíe un mensaje de texto).
