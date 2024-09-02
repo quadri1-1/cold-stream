@@ -12,7 +12,7 @@ const RepairRequest = () => {
         zipCode: '',
         phone: '',
         email: '',
-        maintenanceAccess: '',
+        maintenanceAccess: 'same as authorization',
         authorization: false,
         pets: '',
         problemDescription: '',
@@ -37,7 +37,6 @@ const RepairRequest = () => {
         if (!formData.zipCode) tempErrors.zipCode = "ZIP Code is required.";
         if (!formData.phone) tempErrors.phone = "Phone number is required.";
         if (!formData.email) tempErrors.email = "Email is required.";
-        // if (!formData.maintenanceAccess) tempErrors.maintenanceAccess = "You must select a maintenance access option.";
         if (!formData.authorization) tempErrors.authorization = "You must agree to the terms.";
         if (!formData.problemDescription) tempErrors.problemDescription = "Problem description is required.";
         
@@ -62,20 +61,19 @@ const RepairRequest = () => {
                 zipCode: '',
                 phone: '',
                 email: '',
-                // maintenanceAccess: '',
+                maintenanceAccess: 'same as authorization',
                 authorization: false,
                 pets: '',
                 problemDescription: '',
             });
         } else {
-            console.log('Validation failed'); // Debugging
+            console.log('Validation failed'); 
         }
     };
 
     return (
         <div className="form-container">
             <form onSubmit={handleSubmit}>
-                {/* Form fields */}
                 <div className="name-fields">
                     <label htmlFor="firstName">First Name*</label>
                     <input 

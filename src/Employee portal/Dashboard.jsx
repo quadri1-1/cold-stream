@@ -90,7 +90,7 @@ const Dashboard = () => {
         </header>
         <section className="stats">
           <div className="card">
-            <h3>Total Submissions</h3>
+            <h3>Total Rental Applications</h3>
             <p>{formData.length}</p>
           </div>
           <div className="card">
