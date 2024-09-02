@@ -1,4 +1,6 @@
+// src/OnlineRentalApplication.js
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/onlineregform.css";
 
 const OnlineRentalApplication = () => {
@@ -32,6 +34,8 @@ const OnlineRentalApplication = () => {
   const [errors, setErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState("");
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -42,59 +46,35 @@ const OnlineRentalApplication = () => {
 
     if (!formData.firstName) formErrors.firstName = "First Name is required";
     if (!formData.lastName) formErrors.lastName = "Last Name is required";
-    if (!formData.streetAddress)
-      formErrors.streetAddress = "Street Address is required";
+    if (!formData.streetAddress) formErrors.streetAddress = "Street Address is required";
     if (!formData.city) formErrors.city = "City is required";
     if (!formData.state) formErrors.state = "State is required";
     if (!formData.zipCode) formErrors.zipCode = "ZIP Code is required";
     if (!formData.phone) formErrors.phone = "Phone number is required";
     if (!formData.email) formErrors.email = "Email is required";
-    if (!formData.propertyInterest)
-      formErrors.propertyInterest = "Property Interest is required";
-    if (!formData.contactPreference)
-      formErrors.contactPreference = "Contact Preference is required";
-    if (!formData.smokingCompliance)
-      formErrors.smokingCompliance = "Smoking Compliance is required";
-    if (!formData.reasonForMove)
-      formErrors.reasonForMove = "Reason for moving is required";
+    if (!formData.propertyInterest) formErrors.propertyInterest = "Property Interest is required";
+    if (!formData.contactPreference) formErrors.contactPreference = "Contact Preference is required";
+    if (!formData.smokingCompliance) formErrors.smokingCompliance = "Smoking Compliance is required";
+    if (!formData.reasonForMove) formErrors.reasonForMove = "Reason for moving is required";
 
     setErrors(formErrors);
     return Object.keys(formErrors).length === 0;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
 
     if (validateForm()) {
-      console.log("Form validation passed");
+      const existingSubmissions = JSON.parse(localStorage.getItem("formSubmissions")) || [];
+      const updatedSubmissions = [...existingSubmissions, formData];
+      localStorage.setItem("formSubmissions", JSON.stringify(updatedSubmissions));
 
-      try {
-        // Update the URL to your backend endpoint
-        const response = await fetch("http://localhost:3000/submit-form", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
-
-        console.log("Response status:", response.status);
-
-        if (response.ok) {
-          setSubmissionStatus("Success! Your application has been submitted.");
-        } else {
-          setSubmissionStatus("Error! There was a problem submitting your application.");
-        }
-      } catch (error) {
-        console.error("Submission error:", error);
-        setSubmissionStatus("Error! There was a problem submitting your application.");
-      }
+      setSubmissionStatus("Success! Your application has been submitted.");
+      navigate("/dashboard");
     } else {
       console.log("Form validation failed. Fix the errors and try again.");
     }
   };
-
 
   return (
     <div className="rentalForm">
