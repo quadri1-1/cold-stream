@@ -26,7 +26,8 @@ const LoginForm = () => {
     // Simple authentication logic
     if (username === expectedUsername && password === expectedPassword) {
       console.log("Login successful!");
-      setError("Login successful!");
+      alert("Login successful!");
+      console.log("Login successful!");
       navigate("/employee/dashboard"); // Navigate to the dashboard
     } else {
       console.log("Invalid username or password");
@@ -39,7 +40,6 @@ const LoginForm = () => {
     <div id="screen" className="tea">
       <div className="logg">
         <div className="hoted">
-          <h2>Login</h2>
           <form action="/dashboard" onSubmit={handleLogin}>
             <div className="hot">
               <label className="yeasa" htmlFor="Email">
@@ -69,7 +69,6 @@ const LoginForm = () => {
                 required
               />
             </div>
-            {error && <p className="success">{error}</p>}
             {error && <p className="error">{error}</p>}
             <div className="hot">
               <button className="sub" type="submit">
