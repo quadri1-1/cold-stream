@@ -8,11 +8,11 @@ const RepairRequest = () => {
         streetAddress: '',
         addressLine2: '',
         city: '',
-        state: 'PA',
+        state: '',
         zipCode: '',
         phone: '',
         email: '',
-        maintenanceAccess: '',
+        maintenanceAccess: 'same as authorization',
         authorization: false,
         pets: '',
         problemDescription: '',
@@ -37,7 +37,6 @@ const RepairRequest = () => {
         if (!formData.zipCode) tempErrors.zipCode = "ZIP Code is required.";
         if (!formData.phone) tempErrors.phone = "Phone number is required.";
         if (!formData.email) tempErrors.email = "Email is required.";
-        if (!formData.maintenanceAccess) tempErrors.maintenanceAccess = "You must select a maintenance access option.";
         if (!formData.authorization) tempErrors.authorization = "You must agree to the terms.";
         if (!formData.problemDescription) tempErrors.problemDescription = "Problem description is required.";
         
@@ -47,9 +46,28 @@ const RepairRequest = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log('Form submitted'); // Debugging
         if (validate()) {
-            console.log(formData);
-            // Submit form
+            const storedRepairRequests = JSON.parse(localStorage.getItem('repairRequests')) || [];
+            localStorage.setItem('repairRequests', JSON.stringify([...storedRepairRequests, formData]));
+            console.log('Form data saved:', formData); // Debugging
+            setFormData({
+                firstName: '',
+                lastName: '',
+                streetAddress: '',
+                addressLine2: '',
+                city: '',
+                state: '',
+                zipCode: '',
+                phone: '',
+                email: '',
+                maintenanceAccess: 'same as authorization',
+                authorization: false,
+                pets: '',
+                problemDescription: '',
+            });
+        } else {
+            console.log('Validation failed'); 
         }
     };
 
@@ -152,7 +170,7 @@ const RepairRequest = () => {
                 </div>
 
                 <div className="maintenance-access">
-                    <label><strong>Maintenance Access  *</strong></label>
+                    
                     <div>
                         <input 
                             type="radio" 
@@ -163,7 +181,7 @@ const RepairRequest = () => {
                             onChange={handleChange}
                         />
                         <label htmlFor="present">
-                            I want to be present for the appointment; I understand that appointments will be 8:00am-4:00pm Mon-Fri, and will make arrangements to be present for the appointment. I understand that if I do not cancel the appointment at least 24 hours prior to the appointment or am not present for the appointment I will be billed a $75.00 missed appointment fee.
+                            
                         </label>
                     </div>
                     <div>
@@ -176,22 +194,28 @@ const RepairRequest = () => {
                             onChange={handleChange}
                         />
                         <label htmlFor="enter">
-                            Maintenance has my permission to enter the home if I cannot be present to complete the authorized repairs.
+                           
                         </label>
                     </div>
                     {errors.maintenanceAccess && <span className="error">{errors.maintenanceAccess}</span>}
                 </div>
 
                 <div className="authorization">
+                    <legend><strong>Maintenance Access  *</strong></legend>
                     <label htmlFor="authorization">
-                        <input 
-                            type="checkbox" 
-                            id="authorization" 
-                            name="authorization" 
-                            checked={formData.authorization} 
-                            onChange={handleChange}
-                        />
-                        <strong>By checking this box you agree to the above terms. *</strong><br />
+                    I want to be present for the appointment; I understand that appointments will be 8:00am-4:00pm Mon-Fri, and will make arrangements to be present for the appointment. I understand that if I do not cancel the appointment at least 24 hours prior to the appointment or am not present for the appointment I will be billed a $75.00 missed appointment fee.
+                        <br />
+                        Maintenance has my permission to enter the home if I cannot be present to complete the authorized repairs.
+                        <div className="auth-label">
+                            <input 
+                                type="checkbox" 
+                                id="authorization" 
+                                name="authorization" 
+                                checked={formData.authorization} 
+                                onChange={handleChange}
+                            />
+                            <strong>By checking this box you agree to the above terms. *</strong><br />
+                        </div>
                         I am authorized to make the maintenance request.
                     </label>
                     {errors.authorization && <span className="error">{errors.authorization}</span>}

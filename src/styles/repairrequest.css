@@ -72,6 +72,19 @@ body {
     gap: 15px;
 }
 
+.form-container input[type="checkbox"] {
+    width: 15px;
+}
+
+.auth-label
+ {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
 .error {
     width: 60%;
     background-color: #f9d6d3;
@@ -120,3 +133,26 @@ body {
 strong {
     font-family: Rubik;
 }
+
+#status-message {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 5px;
+    padding: 10px 20px;
+    border-left: 2px solid;
+    font-family: Poppins;
+  }
+  
+button + .success {
+    background-color: rgb(192, 247, 192);
+    border-color: rgb(5, 159, 5);
+    color: rgb(2, 152, 2);
+
+  }
+  
+button +  .error {
+    background-color: #f9d6d3;
+    border-color: #e82610;
+    color: #e82610;
+
+  }

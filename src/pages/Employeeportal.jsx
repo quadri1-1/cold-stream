@@ -1,12 +1,12 @@
 import React from 'react'
-import Login from '../Employee portal/Login'
+import LoginForm from '../Employee portal/LoginForm'
 
 const Employeeportal = () => {
   return (
       <div>
-          <Login/>
+          <LoginForm/>
     </div>
   )
 }
 
-export default Employeeportal
+export default Employeeportal;

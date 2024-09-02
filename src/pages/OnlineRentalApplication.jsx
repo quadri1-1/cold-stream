@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/onlineregform.css";
 
 const OnlineRentalApplication = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     propertyInterest: "",
     firstName: "",
     lastName: "",
@@ -27,10 +28,14 @@ const OnlineRentalApplication = () => {
     monthlyIncome: "",
     backgroundIssues: "",
     backgroundInfo: "",
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState("");
+  const [statusType, setStatusType] = useState(""); // to differentiate between success and error
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,56 +47,36 @@ const OnlineRentalApplication = () => {
 
     if (!formData.firstName) formErrors.firstName = "First Name is required";
     if (!formData.lastName) formErrors.lastName = "Last Name is required";
-    if (!formData.streetAddress)
-      formErrors.streetAddress = "Street Address is required";
+    if (!formData.streetAddress) formErrors.streetAddress = "Street Address is required";
     if (!formData.city) formErrors.city = "City is required";
     if (!formData.state) formErrors.state = "State is required";
     if (!formData.zipCode) formErrors.zipCode = "ZIP Code is required";
     if (!formData.phone) formErrors.phone = "Phone number is required";
     if (!formData.email) formErrors.email = "Email is required";
-    if (!formData.propertyInterest)
-      formErrors.propertyInterest = "Property Interest is required";
-    if (!formData.contactPreference)
-      formErrors.contactPreference = "Contact Preference is required";
-    if (!formData.smokingCompliance)
-      formErrors.smokingCompliance = "Smoking Compliance is required";
-    if (!formData.reasonForMove)
-      formErrors.reasonForMove = "Reason for moving is required";
+    if (!formData.propertyInterest) formErrors.propertyInterest = "Property Interest is required";
+    if (!formData.contactPreference) formErrors.contactPreference = "Contact Preference is required";
+    if (!formData.smokingCompliance) formErrors.smokingCompliance = "Smoking Compliance is required";
+    if (!formData.reasonForMove) formErrors.reasonForMove = "Reason for moving is required";
 
     setErrors(formErrors);
     return Object.keys(formErrors).length === 0;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
 
     if (validateForm()) {
-      console.log("Form validation passed");
+      const existingSubmissions = JSON.parse(localStorage.getItem("formSubmissions")) || [];
+      const updatedSubmissions = [...existingSubmissions, formData];
+      localStorage.setItem("formSubmissions", JSON.stringify(updatedSubmissions));
 
-      try {
-        // Update the URL to your backend endpoint
-        const response = await fetch("http://localhost:3000/submit-form", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
-
-        console.log("Response status:", response.status);
-
-        if (response.ok) {
-          setSubmissionStatus("Success! Your application has been submitted.");
-        } else {
-          setSubmissionStatus("Error! There was a problem submitting your application.");
-        }
-      } catch (error) {
-        console.error("Submission error:", error);
-        setSubmissionStatus("Error! There was a problem submitting your application.");
-      }
+      setSubmissionStatus("Success! Your application has been submitted.");
+      setStatusType("success");
+      setFormData(initialFormData); // Clear form fields
+      navigate("");
     } else {
-      console.log("Form validation failed. Fix the errors and try again.");
+      setSubmissionStatus("Form validation failed. Fix the errors and try again.");
+      setStatusType("error");
     }
   };
 
@@ -113,45 +98,47 @@ const OnlineRentalApplication = () => {
             onChange={handleChange}
           >
             <option value="">Any property</option>
-            <option value="offices-1242-hamilton">
+            <option value="Offices Available for rent 1242-1244 W Hamilton St, Allentown,
+              Pennsylvania 18102, US">
               Offices Available for rent 1242-1244 W Hamilton St, Allentown,
               Pennsylvania 18102, US
             </option>
-            <option value="2149-w-allen">
+            <option value="2149 W Allen St. Allentown, Allentown, Pennsylvania 18104, US">
               2149 W Allen St. Allentown, Allentown, Pennsylvania 18104, US
             </option>
-            <option value="122-market-bangor">
+            <option value="122 Market St., Bangor, Pennsylvania 18013, US">
               122 Market St., Bangor, Pennsylvania 18013, US
             </option>
-            <option value="1801-e-cedar">
+            <option value="1801 E Cedar St., Allentown, Pennsylvania 18109, US">
               1801 E Cedar St., Allentown, Pennsylvania 18109, US
             </option>
-            <option value="502-n-8th-apt1f">
+            <option value="502 N 8th St Apt 1F, Allentown, Pennsylvania 18102, US">
               502 N 8th St Apt 1F, Allentown, Pennsylvania 18102, US
             </option>
-            <option value="garages-allentown">
+            <option value="Garages available for rent Allentown, Allentown, Pennsylvania
+              18102, US">
               Garages available for rent Allentown, Allentown, Pennsylvania
               18102, US
             </option>
-            <option value="834-w-chestnut-apt2">
+            <option value=" 834 W Chestnut St. Apt 2, Allentown, Pennsylvania 18102, US">
               834 W Chestnut St. Apt 2, Allentown, Pennsylvania 18102, US
             </option>
-            <option value="1508-brookstone-hellertown">
+            <option value="1508 Brookstone Place, Hellertown, Pennsylvania 18055, US">
               1508 Brookstone Place, Hellertown, Pennsylvania 18055, US
             </option>
-            <option value="533-pine-bethlehem">
+            <option value="533 Pine St, Bethlehem, Pennsylvania 18018, US">
               533 Pine St, Bethlehem, Pennsylvania 18018, US
             </option>
-            <option value="1402-w-liberty-apt503">
+            <option value="1402 W Liberty St. Apt 503, Allentown, Pennsylvania 18102, US">
               1402 W Liberty St. Apt 503, Allentown, Pennsylvania 18102, US
             </option>
-            <option value="2155-main-northampton-aptb">
+            <option value=" 2155 Main St Apt B, Northampton, Pennsylvania 18067, US">
               2155 Main St Apt B, Northampton, Pennsylvania 18067, US
             </option>
-            <option value="160-pine-allentown">
+            <option value=" 160 Pine St, Allentown, Pennsylvania 18102, US">
               160 Pine St, Allentown, Pennsylvania 18102, US
             </option>
-            <option value="213-e-bertch-apt2-lansford">
+            <option value="213 E Bertch St Apt 2, Lansford, Pennsylvania 18232, US">
               213 E Bertch St Apt 2, Lansford, Pennsylvania 18232, US
             </option>
           </select>
@@ -525,9 +512,12 @@ const OnlineRentalApplication = () => {
         </div>
 
         <button type="submit">Submit Rental Application</button>
-          {submissionStatus && (
-            <p id="status-message">{submissionStatus}</p>
-          )}
+        {submissionStatus && (
+        <p id="status-message" className={statusType}>
+        {submissionStatus}
+        </p>
+)}
+
       </form>
     </div>
   );

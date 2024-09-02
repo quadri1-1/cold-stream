@@ -1,38 +1,57 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import "../Employee portal/login.css";
+import { Link, useNavigate } from "react-router-dom";
+import "../Employee portal/login.css"; // Adjust the import path as necessary
 
-const LoginForm = ({ onLogin }) => {
+const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === "admin" && password === "admin123") {
-      onLogin();
+
+    // Expected username and password
+    const expectedUsername = "admin";
+    const expectedPassword = "admin123";
+
+    // Simple authentication logic
+    if (username === expectedUsername && password === expectedPassword) {
+      console.log("Login successful!");
+      alert("Login successful!");
+      console.log("Login successful!");
+      navigate("/employee/dashboard"); // Navigate to the dashboard
     } else {
-      setError("Invalid username or password");
+      console.log("Invalid username or password");
+      setError("Invalid username or password. Please try again.");
+      // alert("Hint: Username: admin, Password: admin123");
     }
   };
 
   return (
-    <div className="tea">
+    <div id="screen" className="tea">
       <div className="logg">
         <div className="hoted">
-          <form onSubmit={handleLogin}>
+          <form action="/dashboard" onSubmit={handleLogin}>
             <div className="hot">
               <label className="yeasa" htmlFor="Email">
-                Email
+                Username
               </label>
               <input
                 type="text"
                 id="email"
                 className="mail"
-                placeholder="elo@techstudio.com"
+                placeholder="john_doe"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={handleUsernameChange}
                 required
               />
             </div>
@@ -44,9 +63,9 @@ const LoginForm = ({ onLogin }) => {
                 type="password"
                 id="password"
                 className="pass"
-                placeholder="Min 8 characters"
+                placeholder="Min 6 characters"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={handlePasswordChange}
                 required
               />
             </div>
@@ -64,11 +83,6 @@ const LoginForm = ({ onLogin }) => {
       </div>
     </div>
   );
-};
-
-// Adding prop types validation
-LoginForm.propTypes = {
-  onLogin: PropTypes.func.isRequired,
 };
 
 export default LoginForm;
